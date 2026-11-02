@@ -65,7 +65,7 @@ def main():
     if verification.exists():
         checked=read('reports/phase8a/final_verification.json')
         facts['executed_verification']={k:checked[k] for k in ('python','javascript_unit_tests','assistant_harness','browser_checks')}
-    out=ROOT/'portfolio/demo/verified_facts.json'
+    out=ROOT/'showcase/demo/verified_facts.json'
     out.write_text(json.dumps(facts,indent=2,ensure_ascii=True)+'\n',encoding='utf-8')
     print(json.dumps({k:v for k,v in facts.items() if k not in ('source_sha256','product_evidence_cleanup_metrics')},indent=2))
 

@@ -6,9 +6,9 @@ TrendZ is a research prototype that helps beauty teams inspect emerging interest
 
 Built independently as an evolution of a beauty-industry datathon concept inspired by the **L’Oréal Datathon 2025 × Monash** collaboration. **Not affiliated with or endorsed by L’Oréal or Monash.**
 
-![TrendZ dashboard showing observed topics and evidence coverage](portfolio/product-ui/01-dashboard.png)
+![TrendZ dashboard showing observed topics and evidence coverage](showcase/product-ui/01-dashboard.png)
 
-**[Explore the interface](portfolio/product-ui/README.md)** · **[Architecture](portfolio/ARCHITECTURE.md)** · **[Research methods](docs/METHODOLOGY.md)** · **[Demo and setup](docs/GETTING_STARTED.md)** · **[Contribute](CONTRIBUTING.md)**
+**[Explore the interface](showcase/product-ui/README.md)** · **[Architecture](showcase/ARCHITECTURE.md)** · **[Research methods](docs/METHODOLOGY.md)** · **[Demo and setup](docs/GETTING_STARTED.md)** · **[Contribute](CONTRIBUTING.md)**
 
 ## Why this exists
 
@@ -26,13 +26,13 @@ A viral video, an increase in search interest and a creator’s expertise are **
 
 <details><summary><strong>See product journey screenshots</strong></summary>
 
-![Evidence-aware trend details](portfolio/product-ui/03-trend-detail.png)
+![Evidence-aware trend details](showcase/product-ui/03-trend-detail.png)
 
-![Product compatibility interface](portfolio/product-ui/04-product-fit.png)
+![Product compatibility interface](showcase/product-ui/04-product-fit.png)
 
-![Creator candidate evidence](portfolio/product-ui/05-creator-candidates.png)
+![Creator candidate evidence](showcase/product-ui/05-creator-candidates.png)
 
-![Campaign assumption builder](portfolio/product-ui/10-planner-assumptions.png)
+![Campaign assumption builder](showcase/product-ui/10-planner-assumptions.png)
 
 </details>
 
@@ -42,7 +42,7 @@ A viral video, an increase in search interest and a creator’s expertise are **
 - **Inspectable product matching:** deterministic `product-fit-rules-1` over a curated Malaysian beauty catalogue, with explicit insufficient-evidence outcomes.
 - **Product-specific creator candidates:** fixed cohort, profile/affinity review trails, one-video safeguards and eligibility gates.
 - **Scenario economics:** Decimal-based ROI, break-even and low/base/high sensitivity from explicit planning inputs, with version/staleness checks.
-- **Grounded-assistant infrastructure:** nine internal tool contracts, scoped context, canonical citations and validation. **No live LLM provider or working public AI assistant is connected.**
+- **Grounded-assistant infrastructure:** nine internal tool contracts, scoped context, canonical citations and validation. **An opt-in, localhost-only Gemini explanation endpoint is available for approved measured evidence.** The nine-tool deterministic assistant is not model-driven; no public chatbot is deployed.
 
 ### Technical design
 
@@ -64,12 +64,12 @@ Public search/content sources + normalized CSV
       inspectable planning outputs
 
      [separate internal grounded AI boundary]
-            provider not configured
+            provider connection is separately opt-in
 ```
 
-**Stack:** Python · Flask 3 · SQLite · Jinja · JavaScript (vanilla) · CSS · unittest · Node test runner. Optional Google Trends adapter and YouTube API ingestion. No trained machine-learning model, SPA framework or autonomous agent is claimed.
+**Stack:** Python · Flask 3 · SQLite · Jinja · JavaScript (vanilla) · CSS · unittest · Node test runner. Optional Google Trends adapter and YouTube API ingestion. No trained machine-learning model, SPA framework or autonomous agent is claimed. Optional Gemini provider uses server-side credentials; see [Gemini integration](docs/GEMINI_ASSISTANT.md).
 
-![TrendZ system architecture showing evidence and calculation boundaries](portfolio/demo/architecture.png)
+![TrendZ system architecture showing evidence and calculation boundaries](showcase/demo/architecture.png)
 
 ## Evidence and evaluation
 
@@ -112,7 +112,7 @@ With separately obtained/approved frozen evidence assets, run `python scripts/ru
 | `services/assistant_*` | Internal grounded-tool infrastructure (no model provider) |
 | `templates/`, `static/` | Jinja interface and browser behavior |
 | `tests/`, `scripts/` | Unit tests, historical workflows and audit tools |
-| `portfolio/`, `docs/` | Screenshots, architecture, explanation and contribution guides |
+| `showcase/`, `docs/` | Screenshots, architecture, explanation and contribution guides |
 
 ## Known limitations and next steps
 

@@ -4,7 +4,8 @@
 <link rel="stylesheet" href="/static/css/product-ui.css?v=product-1">
 <script src="https://unpkg.com/feather-icons" defer></script>
 <script src="/static/js/product-ui.js?v=product-1" defer></script>
-<script src="/static/js/evidence-dashboard.js?v=product-1" defer></script></head>
+<script src="/static/js/evidence-dashboard.js?v=product-1" defer></script>
+<script src="/static/js/gemini-explainer.js" defer></script></head>
 <body class="product-ui" data-saved-only="{{ 'true' if saved_only else 'false' }}" data-view="{{ 'watchlist' if saved_only else 'explore' if explore else 'dashboard' }}">
 {% include 'product_nav.html' %}
 <main class="product-main">
@@ -27,6 +28,23 @@
 <div id="filtered-empty" class="filtered-empty" hidden><h3>No trends match these filters</h3><p>Try another category or search term.</p><button type="button" id="reset-filters">Clear filters</button></div>
 </section>
 {% if not saved_only %}<details class="awaiting-section"><summary><span>Tracked topics / Awaiting evidence</span><span id="awaiting-count"></span></summary><p>These topics are configured, but do not yet have collected observations. They are not measured trends.</p><div id="awaiting-topics" class="awaiting-topics"></div></details>{% endif %}
+{% if not saved_only %}
+<section id="gemini-explainer" class="dashboard-method" aria-labelledby="gemini-title" style="margin:24px 0;padding:24px;border:1px solid #e6e0e0;border-radius:12px">
+  <p class="product-eyebrow">Optional local AI explanation</p>
+  <h2 id="gemini-title">Ask TrendZ about stored evidence</h2>
+  <p>Gemini explains one measured topic at a time. Responses are generated, not verified, and are not live observations or forecasts.</p>
+  <form id="gemini-form" style="display:grid;gap:12px;max-width:650px;margin-top:14px">
+    <label for="gemini-topic">Measured topic</label>
+    <select id="gemini-topic" required><option value="">Loading observed topics…</option></select>
+    <label for="gemini-question">Your question</label>
+    <textarea id="gemini-question" rows="3" maxlength="500" required placeholder="What does the evidence show, and what remains uncertain?"></textarea>
+    <button type="submit" id="gemini-submit" class="primary-link" style="border:0;cursor:pointer;justify-self:start;padding:10px 18px">Explain evidence</button>
+  </form>
+  <p id="gemini-status" role="status" aria-live="polite"></p>
+  <div id="gemini-answer" aria-live="polite" style="white-space:pre-wrap;line-height:1.7"></div>
+  <a id="gemini-source" hidden>Inspect source evidence</a>
+</section>
+{% endif %}
 <details class="dashboard-method"><summary>How this is measured</summary><p>Cards use the canonical query and the states returned by the existing intelligence API. No overall score or lifecycle is inferred. Provisional and unavailable states are distinct. Query aliases are not pooled. Open a trend for components, source dates, reasons and quality warnings. Editorial category imagery is illustrative.</p><span id="tracked-count"></span></details>
 {% include 'product_footer.html' %}
 </main></body></html>

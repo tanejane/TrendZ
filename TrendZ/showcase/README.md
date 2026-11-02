@@ -1,4 +1,4 @@
-# TrendZ Portfolio Package
+# TrendZ Showcase
 
 **Suggested description:** A beauty trend intelligence research prototype that
 connects public search/content evidence to source-backed Product Fit, reviewed

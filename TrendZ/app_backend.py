@@ -8,6 +8,8 @@ from pathlib import Path
 from typing import Any
 
 from flask import Flask, jsonify, render_template, request
+from dotenv import load_dotenv
+from services.gemini_provider import compact_evidence, explain, GeminiUnavailable
 from services.trend_service import TrendService
 from services.intelligence_service import IntelligenceService
 from services.product_fit import ProductFit
@@ -16,6 +18,8 @@ from services.campaign_context import CampaignContext
 from services.campaign_schema import ScenarioError, OBJECTIVES, FORMATS
 from services.campaign_scenarios import evaluate as evaluate_campaign
 
+
+load_dotenv(Path(__file__).resolve().parent / ".env")
 
 app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
@@ -484,6 +488,70 @@ def api_malaysia_hashtag_products(hashtag: str):
             "local_availability": None,
             "cultural_relevance": recommendations["malaysia_relevance"],
         },
+    )
+
+
+@app.post("/api/assistant/explain")
+def api_assistant_explain():
+    """Local-only, opt-in Gemini explanation of one measured topic.
+
+    Separate from the nine-tool deterministic harness. Never publicly expose
+    this key-backed endpoint without authentication and server-side rate limiting.
+    """
+    if request.remote_addr not in ("127.0.0.1", "::1"):
+        return api_error("Local access only", 403, code="local_only")
+    if os.getenv("TRENDZ_ASSISTANT_ENABLED", "false").lower() != "true":
+        return api_error("Assistant disabled", 503, code="assistant_disabled")
+    if app.config["DATA_MODE"] != "real":
+        return api_error("Assistant requires measured data mode", 422, code="not_measured")
+    if request.content_length is not None and request.content_length > 2048:
+        return api_error("Request too large", 413, code="request_too_large")
+    data = request.get_json(silent=True)
+    if not isinstance(data, dict) or set(data) != {"topic_id", "question"}:
+        return api_error("Expected topic_id and question", 400, code="invalid_request")
+    topic_id, question = data["topic_id"], data["question"]
+    if not isinstance(topic_id, str) or len(topic_id) > 100 or not isinstance(question, str) or not question.strip() or len(question) > 500:
+        return api_error("Invalid topic or question", 400, code="invalid_request")
+    try:
+        topics = json.loads((DATA_DIR / "tracked_topics.json").read_text(encoding="utf-8"))
+        if not any(t["id"] == topic_id for t in topics):
+            return api_error("Unknown topic", 404, code="unknown_topic")
+        intelligence = IntelligenceService(app.config["DATABASE_PATH"], topics).topic(topic_id)
+        if intelligence.get("data_mode") != "real":
+            return api_error("Measured evidence unavailable", 422, code="no_evidence")
+        evidence = compact_evidence(intelligence)
+        answer = explain(question, evidence)
+    except GeminiUnavailable as error:
+        # The provider chains the original exception. Log only its type and
+        # numeric HTTP code: never log the raw provider error, prompt, or key.
+        cause = error.__cause__
+        cause_type = type(cause).__name__ if cause is not None else "None"
+        raw_status = getattr(cause, "code", None) if cause is not None else None
+        if not isinstance(raw_status, int):
+            raw_status = getattr(cause, "status_code", None) if cause is not None else None
+        status = raw_status if isinstance(raw_status, int) and 100 <= raw_status <= 599 else None
+        app.logger.warning(
+            "Gemini diagnostic: cause_type=%s, provider_status=%s",
+            cause_type, status if status is not None else "unknown",
+        )
+        if status == 429:
+            message, code = "Gemini rate limit or quota reached. Check Google AI Studio usage.", "provider_quota"
+        elif status in (400, 404):
+            message, code = "Gemini rejected the request or model. Check your configured model and request limits.", "provider_request_rejected"
+        elif status in (401, 403):
+            message, code = "Gemini API access denied. Check the API key and project permissions.", "provider_access_denied"
+        else:
+            message, code = "Gemini unavailable. Check the local server diagnostic and provider configuration.", "provider_unavailable"
+        return api_error(message, 503, code=code)
+    except (KeyError, ValueError, sqlite3.Error, OSError) as error:
+        app.logger.warning("Trend intelligence evidence unavailable: %s", type(error).__name__)
+        return api_error("Measured evidence unavailable", 503, code="evidence_unavailable")
+    return api_success(
+        answer=answer, topic_id=topic_id, query_id=evidence["query_id"],
+        model=os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite"),
+        data_mode="real", output_kind="generative_explanation_unverified",
+        disclaimer="AI-generated interpretation of stored evidence; verify against source components. Not live data or a forecast.",
+        evidence_url=f"/api/intelligence/{topic_id}",
     )
 
 

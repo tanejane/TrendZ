@@ -8,11 +8,11 @@ TrendZ intentionally avoids a combined popularity/viral-trend score. For definit
 - [Campaign assumptions and economics](../PHASE6B.md)
 - [Nine-tool grounding interface](../PHASE7B.md)
 - [Live provider deferral](../PHASE7C_DEFERRED.md)
-- [Architecture](../portfolio/ARCHITECTURE.md)
+- [Architecture](../showcase/ARCHITECTURE.md)
 
 ## Reproducibility status
 
-The original project archive contains a frozen measured SQLite pilot, curated product/review exports, source hashes, research scripts and a saved Phase 8A audit. Those reports and evidence files are deliberately omitted from this public source-only release. The publication includes `portfolio/demo/verified_facts.json` with historical evidence counts and SHA-256 provenance, but it cannot independently reproduce those facts without the original research artifacts. Treat these as **historically recorded bounded results**, not as CI or independently verified benchmark claims for the GitHub zip.
+The original project archive contains a frozen measured SQLite pilot, curated product/review exports, source hashes, research scripts and a saved Phase 8A audit. Those reports and evidence files are deliberately omitted from this public source-only release. The publication includes `showcase/demo/verified_facts.json` with historical evidence counts and SHA-256 provenance, but it cannot independently reproduce those facts without the original research artifacts. Treat these as **historically recorded bounded results**, not as CI or independently verified benchmark claims for the GitHub zip.
 
 ## Key cautions
 

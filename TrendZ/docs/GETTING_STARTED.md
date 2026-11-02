@@ -3,7 +3,7 @@
 ## Requirements
 
 - Python 3.10+ (the original audit used Python 3.13)
-- Flask 3.0.3 (`requirements.txt`)
+- Flask 3.0.3 and optional Gemini SDK (`requirements.txt`)
 - Node.js for the JavaScript tests; Playwright + Chrome for browser checks
 - No API key for stored-snapshot viewing; `YOUTUBE_API_KEY` only for explicit ingestion
 
@@ -36,7 +36,7 @@ python -m venv .venv
 
 On macOS/Linux use `.venv/bin/python` in place of `.\.venv\Scripts\python.exe`. Open `http://127.0.0.1:5000`. The launcher creates a disposable SQLite copy, and any local watchlist edits are temporary. Optional port: `--port 5022`.
 
-`TRENDZ_DATA_MODE=real` uses observation-backed behavior; `demo` explicitly switches to historical synthetic screens and is **not** the measured portfolio demonstration. `TRENDZ_DB_PATH` overrides the writable database path. The `.env.example` file is documentation and is not automatically loaded.
+`TRENDZ_DATA_MODE=real` uses observation-backed behavior; `demo` explicitly switches to historical synthetic screens and is **not** the measured portfolio demonstration. `TRENDZ_DB_PATH` overrides the writable database path. The Flask backend now loads a local `.env` file; see [Gemini explainer](GEMINI_ASSISTANT.md). Never commit `.env`.
 
 ## Tests
 
@@ -50,4 +50,4 @@ Expect missing-evidence errors for workflows needing archived artifacts in a pub
 
 ## Suggested first code-reading path
 
-Read `services/intelligence_service.py`, `services/product_fit.py`, `services/creator_candidate_policy.py`, `services/campaign_economics.py`, then `services/assistant_grounding.py`. Use [ARCHITECTURE.md](../portfolio/ARCHITECTURE.md) for the larger map and [DEMO_GUIDE.md](../portfolio/DEMO_GUIDE.md) for the five-minute research walkthrough.
+Read `services/intelligence_service.py`, `services/product_fit.py`, `services/creator_candidate_policy.py`, `services/campaign_economics.py`, then `services/assistant_grounding.py`. Use [ARCHITECTURE.md](../showcase/ARCHITECTURE.md) for the larger map and [DEMO_GUIDE.md](../showcase/DEMO_GUIDE.md) for the five-minute research walkthrough.

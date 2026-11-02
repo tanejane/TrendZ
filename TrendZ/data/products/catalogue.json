@@ -1,0 +1,5831 @@
+{
+  "catalogue_version": "my-curated-2026-10-15-v1",
+  "verified_on": "2026-10-15",
+  "sources": {
+    "lp-ha-my-pdp": {
+      "url": "https://www.lorealparis.com.my/revitalift/hyaluronic-acid/revitalift-hyaluronic-acid-serum-15ml",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "lp-oil-control-my-pdp": {
+      "url": "https://www.lorealparis.com.my/revitalift/revitalift-hyaluronic-acid-oil-control-serum",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "lp-night-my-pdp": {
+      "url": "https://www.lorealparis.com.my/revitalift/hyaluronic-acid/filler-line-plumping-water-night-cream",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "lp-aura-night-my-pdp": {
+      "url": "https://www.lorealparis.com.my/aura-perfect/aura-perfect-clinical-overnight-treatment-50ml",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "lp-aura-day-my-pdp": {
+      "url": "https://www.lorealparis.com.my/aura-perfect/aura-perfect-clinical-day-cream-spf-19-pa",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "lp-peel-my-pdp": {
+      "url": "https://www.lorealparis.com.my/glycolic-bright/glycolic-bright-anti-dark-spot-exfoliant-peel",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "lp-eye-my-pdp": {
+      "url": "https://www.lorealparis.com.my/glycolic-bright/glycolic-bright-3-glycolic-acid-eye-serum-20ml",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "lrp-b5-my-pdp": {
+      "url": "https://www.laroche-posay.com.my/en-my/hyalu-b5/hyalu-b5-suractivated-serum",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "lrp-mela-my-pdp": {
+      "url": "https://www.laroche-posay.com.my/ms-my/mela-b3/mela-b3-serum",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "lrp-retinol-my-pdp": {
+      "url": "https://www.watsons.com.my/la-roche-posay-retinol-b3-serum-anti-wrinkle-30ml/p/BP_80565",
+      "source_type": "my_retailer",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "mb-teddy-my-pdp": {
+      "url": "https://www.maybelline.com.my/all-products/lip-makeup/lipstick/superstay-teddy-tint",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "mb-vinyl-my-pdp": {
+      "url": "https://www.maybelline.com.my/all-products/lip-makeup/lipstick/super-stay-vinyl-ink-liquid-lipstick",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "mb-ultimatte-my-pdp": {
+      "url": "https://www.maybelline.com.my/all-products/lip-makeup/lipstick/color-sensational-ultimatte-lipstick",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "mb-fresh-my-pdp": {
+      "url": "https://www.maybelline.com.my/all-products/face-makeup/foundation/fit-me-fresh-tint",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "lp-foundation-my-pdp": {
+      "url": "https://www.lorealparis.com.my/infallible/infallible-32h-matte-cover-liquid-foundation-253",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "lp-gold-my-pdp": {
+      "url": "https://www.lorealparis.com.my/elseve/extraordinary-oil/elseve-extraordinary-oil-gold-100ml",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "lp-pink-my-pdp": {
+      "url": "https://www.lorealparis.com.my/elseve/extraordinary-oil/elseve-extraordinary-oil-pink-100ml",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "lp-brown-my-pdp": {
+      "url": "https://www.lorealparis.com.my/elseve/extraordinary-oil/elseve-extraordinary-oil-brown-100ml",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "lp-rose-my-pdp": {
+      "url": "https://www.lorealparis.com.my/elseve/extraordinary-oil/elseve-extraordinary-floral-oil-rose-100ml",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "lp-conditioner-my-pdp": {
+      "url": "https://www.lorealparis.com.my/elseve/extraordinary-oil/extraordinary-oil-smooth-conditioner-440ml",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "lp-shampoo-my-pdp": {
+      "url": "https://www.lorealparis.com.my/elseve/extraordinary-oil/extraordinary-oil-smooth-shampoo-440ml",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "lp-scalp-my-pdp": {
+      "url": "https://www.lorealparis.com.my/elseve/full-resist/anti-hair-fall-scalp-essence",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    },
+    "lp-full-resist-my-pdp": {
+      "url": "https://www.lorealparis.com.my/elseve/full-resist/elseve-full-resist-shampoo-440ml",
+      "source_type": "official_my_brand",
+      "verified_on": "2026-10-15",
+      "timestamp_precision": "day",
+      "access_method": "manual_public_page_or_indexed_extract",
+      "scope": "MY product listing; availability and current package formula unverified"
+    }
+  },
+  "products": [
+    {
+      "product_id": "lp-ha-15ml",
+      "family_id": "lp-ha",
+      "brand": "L'Oreal Paris",
+      "product_name": "Revitalift Hyaluronic Acid Serum (Plump, Youthful, Radiance, Hydration)",
+      "market": "MY",
+      "category": "skincare",
+      "subcategory": "serum",
+      "product_format": "serum",
+      "application_area": null,
+      "finish": null,
+      "raw_ingredients": "AQUA / WATER, GLYCERIN, HYDROXYETHYLPIPERA ZINE ETHANE SULFONIC ACID, SODIUM HYALURONATE, PHENOXYETHANOL, PEG-60 HYDROGENATED CASTOR OIL, ASCORBYL GLUCOSIDE, CHLORPHENESIN, HYDROXYPROPYL GUAR, SODIUM ACETYLATED HYALURONATE, XANTHAN GUM, PENTYLENE GLYCOL, SECALE CEREALE SEED EXTRACT / RYE SEED EXTRACT, DIPEPTIDE DIAMINOBUTYROYL BENZYLAMIDE DIACETATE.",
+      "normalized_ingredients": [
+        "water",
+        "glycerin",
+        "hydroxyethylpipera zine ethane sulfonic acid",
+        "sodium hyaluronate",
+        "phenoxyethanol",
+        "peg-60 hydrogenated castor oil",
+        "ascorbyl glucoside",
+        "chlorphenesin",
+        "hydroxypropyl guar",
+        "sodium acetylated hyaluronate",
+        "xanthan gum",
+        "pentylene glycol",
+        "secale cereale seed extract / rye seed extract",
+        "dipeptide diaminobutyroyl benzylamide diacetate"
+      ],
+      "variant": null,
+      "shade": null,
+      "size": "15ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "hydration",
+          "text": "Brand declares hydration",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        },
+        {
+          "concept": "radiance",
+          "text": "Brand declares radiance",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lp-ha-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "complete",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "Ingredients section; punctuation retained except bullet delimiters normalized to commas"
+            }
+          ]
+        },
+        "normalized_ingredients": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": [
+        "Application area not explicit in retained extract; do not infer it from category"
+      ]
+    },
+    {
+      "product_id": "lp-ha-30ml",
+      "family_id": "lp-ha",
+      "brand": "L'Oreal Paris",
+      "product_name": "Revitalift Hyaluronic Acid Serum (Plump, Youthful, Radiance, Hydration)",
+      "market": "MY",
+      "category": "skincare",
+      "subcategory": "serum",
+      "product_format": "serum",
+      "application_area": null,
+      "finish": null,
+      "raw_ingredients": "AQUA / WATER, GLYCERIN, HYDROXYETHYLPIPERA ZINE ETHANE SULFONIC ACID, SODIUM HYALURONATE, PHENOXYETHANOL, PEG-60 HYDROGENATED CASTOR OIL, ASCORBYL GLUCOSIDE, CHLORPHENESIN, HYDROXYPROPYL GUAR, SODIUM ACETYLATED HYALURONATE, XANTHAN GUM, PENTYLENE GLYCOL, SECALE CEREALE SEED EXTRACT / RYE SEED EXTRACT, DIPEPTIDE DIAMINOBUTYROYL BENZYLAMIDE DIACETATE.",
+      "normalized_ingredients": [
+        "water",
+        "glycerin",
+        "hydroxyethylpipera zine ethane sulfonic acid",
+        "sodium hyaluronate",
+        "phenoxyethanol",
+        "peg-60 hydrogenated castor oil",
+        "ascorbyl glucoside",
+        "chlorphenesin",
+        "hydroxypropyl guar",
+        "sodium acetylated hyaluronate",
+        "xanthan gum",
+        "pentylene glycol",
+        "secale cereale seed extract / rye seed extract",
+        "dipeptide diaminobutyroyl benzylamide diacetate"
+      ],
+      "variant": null,
+      "shade": null,
+      "size": "30ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "hydration",
+          "text": "Brand declares hydration",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        },
+        {
+          "concept": "radiance",
+          "text": "Brand declares radiance",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lp-ha-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "complete",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "Ingredients section; punctuation retained except bullet delimiters normalized to commas"
+            }
+          ]
+        },
+        "normalized_ingredients": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-ha-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": [
+        "Application area not explicit in retained extract; do not infer it from category"
+      ]
+    },
+    {
+      "product_id": "lp-oil-control-unspecified",
+      "family_id": "lp-oil-control",
+      "brand": "L'Oreal Paris",
+      "product_name": "Revitalift Hyaluronic Acid Oil Control Serum",
+      "market": "MY",
+      "category": "skincare",
+      "subcategory": "serum",
+      "product_format": "serum",
+      "application_area": null,
+      "finish": null,
+      "raw_ingredients": "AQUA / WATER, ALCOHOL DENAT., GLYCERIN, DIPROPYLENE GLYCOL, BUTYLENE GLYCOL, NIACINAMIDE, PEG/PPG/POLYBUTYLENE GLYCOL-8/5/3 GLYCERIN, SALICYLIC ACID, HYDROXYETHYLPIPERAZINE ETHANE SULFONIC ACID, BIS-PEG-18 METHYL ETHER DIMETHYL SILANE, SODIUM HYDROXIDE, LINALOOL, GERANIOL, ZINC GLUCONATE, SCLEROTIUM GUM, ALPHA-ISOMETHYL IONONE, LECITHIN, SODIUM HYALURONATE, SILICA, PULLULAN, PHENOXYETHANOL, ADENOSINE, AMMONIUM POLYACRYLOYLDIMETHYL TAURATE, LIMONENE, TOCOPHEROL, CAPRYLOYL SALICYLIC ACID, TETRASODIUM GLUTAMATE DIACETATE, CITRONELLOL, XANTHAN GUM, PEG-60 HYDROGENATED CASTOR OIL, PARFUM / FRAGRANCE.",
+      "normalized_ingredients": [
+        "water",
+        "alcohol denat",
+        "glycerin",
+        "dipropylene glycol",
+        "butylene glycol",
+        "niacinamide",
+        "peg/ppg/polybutylene glycol-8/5/3 glycerin",
+        "salicylic acid",
+        "hydroxyethylpiperazine ethane sulfonic acid",
+        "bis-peg-18 methyl ether dimethyl silane",
+        "sodium hydroxide",
+        "linalool",
+        "geraniol",
+        "zinc gluconate",
+        "sclerotium gum",
+        "alpha-isomethyl ionone",
+        "lecithin",
+        "sodium hyaluronate",
+        "silica",
+        "pullulan",
+        "phenoxyethanol",
+        "adenosine",
+        "ammonium polyacryloyldimethyl taurate",
+        "limonene",
+        "tocopherol",
+        "capryloyl salicylic acid",
+        "tetrasodium glutamate diacetate",
+        "citronellol",
+        "xanthan gum",
+        "peg-60 hydrogenated castor oil",
+        "parfum / fragrance"
+      ],
+      "variant": null,
+      "shade": null,
+      "size": null,
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "hydration",
+          "text": "Brand declares hydration",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        },
+        {
+          "concept": "oil_control",
+          "text": "Brand declares oil control",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lp-oil-control-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "complete",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-oil-control-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-oil-control-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-oil-control-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-oil-control-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-oil-control-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-oil-control-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-oil-control-my-pdp",
+              "basis": "Ingredients section; punctuation retained except bullet delimiters normalized to commas"
+            }
+          ]
+        },
+        "normalized_ingredients": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-oil-control-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-oil-control-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": [
+        "Size and explicit application area not verified; do not infer application from skincare category"
+      ]
+    },
+    {
+      "product_id": "lp-night-50ml",
+      "family_id": "lp-night",
+      "brand": "L'Oreal Paris",
+      "product_name": "Revitalift Filler Line Plumping Water Night Cream",
+      "market": "MY",
+      "category": "skincare",
+      "subcategory": "cream",
+      "product_format": "cream",
+      "application_area": [
+        "face",
+        "neck"
+      ],
+      "finish": null,
+      "raw_ingredients": "AQUA / WATER, GLYCERIN, ISOPROPYL PALMITATE, ALCOHOL DENAT., NIACINAMIDE, BUTYROSPERMUM PARKII BUTTER / SHEA BUTTER, AMMONIUMPOLYACRYLOYLDIMETHYL TAURATE, LINALOOL, SODIUM HYDROXIDE, SODIUM POLYACRYLATE, SODIUM ACETYLATED HYALURONATE, SODIUMDEHYDROACETATE, SODIUM HYALURONATE, 2-OLEAMIDO-1,3OCTADECANEDIOL, PHENOXYETHANOL, LIMONENE, CAPRYLYL GLYCOL, TETRASODIUM GLUTAMATE DIACETATE, HYDROLYZED SOY PROTEIN, CITRONELLOL, CITRIC ACID, PHYTIC ACID, PANTHENOL, PENTYLENE GLYCOL, POLYEPSILON LYSINE, BENZYL ALCOHOL, CI 60730 / EXT.VIOLET 2, PARFUM / FRAGRANCE.",
+      "normalized_ingredients": [
+        "water",
+        "glycerin",
+        "isopropyl palmitate",
+        "alcohol denat",
+        "niacinamide",
+        "butyrospermum parkii butter / shea butter",
+        "ammoniumpolyacryloyldimethyl taurate",
+        "linalool",
+        "sodium hydroxide",
+        "sodium polyacrylate",
+        "sodium acetylated hyaluronate",
+        "sodiumdehydroacetate",
+        "sodium hyaluronate",
+        "2-oleamido-1,3octadecanediol",
+        "phenoxyethanol",
+        "limonene",
+        "caprylyl glycol",
+        "tetrasodium glutamate diacetate",
+        "hydrolyzed soy protein",
+        "citronellol",
+        "citric acid",
+        "phytic acid",
+        "panthenol",
+        "pentylene glycol",
+        "polyepsilon lysine",
+        "benzyl alcohol",
+        "ci 60730 / ext.violet 2",
+        "parfum / fragrance"
+      ],
+      "variant": null,
+      "shade": null,
+      "size": "50ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "hydration",
+          "text": "Brand declares moisture retention",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lp-night-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "complete",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-night-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-night-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-night-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-night-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-night-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-night-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-night-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-night-my-pdp",
+              "basis": "Ingredients section; punctuation retained except bullet delimiters normalized to commas"
+            }
+          ]
+        },
+        "normalized_ingredients": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-night-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-night-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-night-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": []
+    },
+    {
+      "product_id": "lp-aura-night-50ml",
+      "family_id": "lp-aura-night",
+      "brand": "L'Oreal Paris",
+      "product_name": "Aura Perfect Clinical Overnight Treatment",
+      "market": "MY",
+      "category": "skincare",
+      "subcategory": "cream",
+      "product_format": "cream",
+      "application_area": [
+        "face",
+        "neck"
+      ],
+      "finish": null,
+      "raw_ingredients": null,
+      "normalized_ingredients": [
+        "niacinamide",
+        "sodium hyaluronate"
+      ],
+      "variant": null,
+      "shade": null,
+      "size": "50ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "radiance",
+          "text": "Brand declares improved radiance",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        },
+        {
+          "concept": "even_tone",
+          "text": "Brand declares more even tone",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lp-aura-night-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "partial",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-night-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-night-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-night-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-night-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-night-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-night-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-night-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "normalized_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-night-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-night-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-night-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": []
+    },
+    {
+      "product_id": "lp-aura-day-50ml",
+      "family_id": "lp-aura-day",
+      "brand": "L'Oreal Paris",
+      "product_name": "Aura Perfect Clinical Day Cream SPF 19 PA+++",
+      "market": "MY",
+      "category": "skincare",
+      "subcategory": "cream",
+      "product_format": "cream",
+      "application_area": [
+        "face",
+        "neck"
+      ],
+      "finish": null,
+      "raw_ingredients": null,
+      "normalized_ingredients": [
+        "niacinamide"
+      ],
+      "variant": null,
+      "shade": null,
+      "size": "50ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "hydration",
+          "text": "Brand declares moisturization",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        },
+        {
+          "concept": "even_tone",
+          "text": "Brand declares more even tone",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lp-aura-day-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "partial",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-day-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-day-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-day-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-day-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-day-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-day-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-day-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "normalized_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-day-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-day-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-aura-day-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": []
+    },
+    {
+      "product_id": "lp-peel-25ml",
+      "family_id": "lp-peel",
+      "brand": "L'Oreal Paris",
+      "product_name": "Glycolic Bright Anti-Dark Spot Exfoliant Peel",
+      "market": "MY",
+      "category": "skincare",
+      "subcategory": "peel",
+      "product_format": "peel",
+      "application_area": [
+        "face"
+      ],
+      "finish": null,
+      "raw_ingredients": "AQUA / WATER, ALCOHOL DENAT., LACTIC ACID, PROPANDIOL, MICA, GLYCOLIC ACID, CI77891 / TITANIUM DIOXIDE, GLUCONOLACTONE, GLYCERIN, SILICA, SODIUM HYDROXIDE, SALICYLIC ACID, NIACINAMIDE, SODIUM PHOSPHATE, DISODIUM PHOSPHATE, HYDROXYETHYLCELLULOSE, TRISODIUM ETHYLENEDIAMINE DISUCCINATE, XANTHAN GUM, POLYACRYLATE CROSSPOLYMER-6, POLYSORBATE 60, CI 14700 / RED 4, PARFUM / FRAGRANCE.",
+      "normalized_ingredients": [
+        "water",
+        "alcohol denat",
+        "lactic acid",
+        "propandiol",
+        "mica",
+        "glycolic acid",
+        "ci77891 / titanium dioxide",
+        "gluconolactone",
+        "glycerin",
+        "silica",
+        "sodium hydroxide",
+        "salicylic acid",
+        "niacinamide",
+        "sodium phosphate",
+        "disodium phosphate",
+        "hydroxyethylcellulose",
+        "trisodium ethylenediamine disuccinate",
+        "xanthan gum",
+        "polyacrylate crosspolymer-6",
+        "polysorbate 60",
+        "ci 14700 / red 4",
+        "parfum / fragrance"
+      ],
+      "variant": null,
+      "shade": null,
+      "size": "25ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "radiance",
+          "text": "Brand declares radiance",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        },
+        {
+          "concept": "soothing",
+          "text": "Brand declares soothing",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lp-peel-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "complete",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-peel-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-peel-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-peel-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-peel-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-peel-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-peel-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-peel-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-peel-my-pdp",
+              "basis": "Ingredients section; punctuation retained except bullet delimiters normalized to commas"
+            }
+          ]
+        },
+        "normalized_ingredients": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-peel-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-peel-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-peel-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": [
+        "Rinse-off exfoliant peel; not treated as a leave-on serum despite marketing using both terms"
+      ]
+    },
+    {
+      "product_id": "lp-eye-20ml",
+      "family_id": "lp-eye",
+      "brand": "L'Oreal Paris",
+      "product_name": "Glycolic Bright 3% [GLYCOLIC + VIT CG + NIACINAMIDE] Dark Circle Eye Serum",
+      "market": "MY",
+      "category": "skincare",
+      "subcategory": "serum",
+      "product_format": "serum",
+      "application_area": [
+        "eye_contour"
+      ],
+      "finish": null,
+      "raw_ingredients": null,
+      "normalized_ingredients": [
+        "niacinamide"
+      ],
+      "variant": null,
+      "shade": null,
+      "size": "20ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "even_tone",
+          "text": "Brand declares dark-circle appearance benefit",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lp-eye-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "partial",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-eye-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-eye-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-eye-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-eye-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-eye-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-eye-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-eye-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "normalized_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-eye-my-pdp",
+              "basis": "Explicit ingredient complex in PDP heading"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-eye-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-eye-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": []
+    },
+    {
+      "product_id": "lrp-b5-30ml",
+      "family_id": "lrp-b5",
+      "brand": "La Roche-Posay",
+      "product_name": "HYALU B5 SURACTIVATED SERUM",
+      "market": "MY",
+      "category": "skincare",
+      "subcategory": "serum",
+      "product_format": "serum",
+      "application_area": [
+        "face",
+        "neck",
+        "decollete"
+      ],
+      "finish": null,
+      "raw_ingredients": "AQUA / WATER / EAU, GLYCERIN, ALCOHOL DENAT., PROPYLENE GLYCOL, PANTHENOL, PENTYLENE GLYCOL, DIMETHICONE, PEG-6 CAPRYLIC/CAPRIC GLYCERIDES, ALPINIA GALANGA LEAF EXTRACT, CALCIUM CHLORIDE, GLYCERYL ISOSTEARATE, MADECASSOSIDE, PPG-6-DECYLTETRADECETH-30, SODIUM ACETYLATED HYALURONATE, SODIUM HYALURONATE, ALGIN, ADENOSINE, AMMONIUM POLYACRYLOYLDIMETHYL TAURATE, PROPANEDIOL, HYDROLYZED HYALURONIC ACID, HYDROXYACETOPHENONE, CAPRYLIC/CAPRIC TRIGLYCERIDE, CAPRYLYL GLYCOL, CITRIC ACID, TRISODIUM ETHYLENEDIAMINE DISUCCINATE, ACETYL GLUCOSAMINE, XANTHAN GUM, BUTYLENE GLYCOL, 1,2-HEXANEDIOL, TOCOPHEROL, PHENOXYETHANOL, PARFUM / FRAGRANCE",
+      "normalized_ingredients": [
+        "aqua / water / eau",
+        "glycerin",
+        "alcohol denat",
+        "propylene glycol",
+        "panthenol",
+        "pentylene glycol",
+        "dimethicone",
+        "peg-6 caprylic/capric glycerides",
+        "alpinia galanga leaf extract",
+        "calcium chloride",
+        "glyceryl isostearate",
+        "madecassoside",
+        "ppg-6-decyltetradeceth-30",
+        "sodium acetylated hyaluronate",
+        "sodium hyaluronate",
+        "algin",
+        "adenosine",
+        "ammonium polyacryloyldimethyl taurate",
+        "propanediol",
+        "hydrolyzed hyaluronic acid",
+        "hydroxyacetophenone",
+        "caprylic/capric triglyceride",
+        "caprylyl glycol",
+        "citric acid",
+        "trisodium ethylenediamine disuccinate",
+        "acetyl glucosamine",
+        "xanthan gum",
+        "butylene glycol",
+        "1,2-hexanediol",
+        "tocopherol",
+        "phenoxyethanol",
+        "parfum / fragrance"
+      ],
+      "variant": null,
+      "shade": null,
+      "size": "30ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "barrier_repair",
+          "text": "Brand declares skin barrier repair",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        },
+        {
+          "concept": "hydration",
+          "text": "Brand declares hydration",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        },
+        {
+          "concept": "radiance",
+          "text": "Brand declares glow",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lrp-b5-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "complete",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "Ingredients section; punctuation retained except bullet delimiters normalized to commas"
+            }
+          ]
+        },
+        "normalized_ingredients": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": [
+        "Source says alcohol free but INCI lists ALCOHOL DENAT.; conflicting alcohol claim excluded"
+      ]
+    },
+    {
+      "product_id": "lrp-b5-50ml",
+      "family_id": "lrp-b5",
+      "brand": "La Roche-Posay",
+      "product_name": "HYALU B5 SURACTIVATED SERUM",
+      "market": "MY",
+      "category": "skincare",
+      "subcategory": "serum",
+      "product_format": "serum",
+      "application_area": [
+        "face",
+        "neck",
+        "decollete"
+      ],
+      "finish": null,
+      "raw_ingredients": "AQUA / WATER / EAU, GLYCERIN, ALCOHOL DENAT., PROPYLENE GLYCOL, PANTHENOL, PENTYLENE GLYCOL, DIMETHICONE, PEG-6 CAPRYLIC/CAPRIC GLYCERIDES, ALPINIA GALANGA LEAF EXTRACT, CALCIUM CHLORIDE, GLYCERYL ISOSTEARATE, MADECASSOSIDE, PPG-6-DECYLTETRADECETH-30, SODIUM ACETYLATED HYALURONATE, SODIUM HYALURONATE, ALGIN, ADENOSINE, AMMONIUM POLYACRYLOYLDIMETHYL TAURATE, PROPANEDIOL, HYDROLYZED HYALURONIC ACID, HYDROXYACETOPHENONE, CAPRYLIC/CAPRIC TRIGLYCERIDE, CAPRYLYL GLYCOL, CITRIC ACID, TRISODIUM ETHYLENEDIAMINE DISUCCINATE, ACETYL GLUCOSAMINE, XANTHAN GUM, BUTYLENE GLYCOL, 1,2-HEXANEDIOL, TOCOPHEROL, PHENOXYETHANOL, PARFUM / FRAGRANCE",
+      "normalized_ingredients": [
+        "aqua / water / eau",
+        "glycerin",
+        "alcohol denat",
+        "propylene glycol",
+        "panthenol",
+        "pentylene glycol",
+        "dimethicone",
+        "peg-6 caprylic/capric glycerides",
+        "alpinia galanga leaf extract",
+        "calcium chloride",
+        "glyceryl isostearate",
+        "madecassoside",
+        "ppg-6-decyltetradeceth-30",
+        "sodium acetylated hyaluronate",
+        "sodium hyaluronate",
+        "algin",
+        "adenosine",
+        "ammonium polyacryloyldimethyl taurate",
+        "propanediol",
+        "hydrolyzed hyaluronic acid",
+        "hydroxyacetophenone",
+        "caprylic/capric triglyceride",
+        "caprylyl glycol",
+        "citric acid",
+        "trisodium ethylenediamine disuccinate",
+        "acetyl glucosamine",
+        "xanthan gum",
+        "butylene glycol",
+        "1,2-hexanediol",
+        "tocopherol",
+        "phenoxyethanol",
+        "parfum / fragrance"
+      ],
+      "variant": null,
+      "shade": null,
+      "size": "50ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "barrier_repair",
+          "text": "Brand declares skin barrier repair",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        },
+        {
+          "concept": "hydration",
+          "text": "Brand declares hydration",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        },
+        {
+          "concept": "radiance",
+          "text": "Brand declares glow",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lrp-b5-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "complete",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "Ingredients section; punctuation retained except bullet delimiters normalized to commas"
+            }
+          ]
+        },
+        "normalized_ingredients": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-b5-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": [
+        "Source says alcohol free but INCI lists ALCOHOL DENAT.; conflicting alcohol claim excluded"
+      ]
+    },
+    {
+      "product_id": "lrp-mela-30ml",
+      "family_id": "lrp-mela",
+      "brand": "La Roche-Posay",
+      "product_name": "MELA B3 SERUM",
+      "market": "MY",
+      "category": "skincare",
+      "subcategory": "serum",
+      "product_format": "serum",
+      "application_area": null,
+      "finish": null,
+      "raw_ingredients": null,
+      "normalized_ingredients": [
+        "niacinamide",
+        "retinyl palmitate"
+      ],
+      "variant": null,
+      "shade": null,
+      "size": "30ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "even_tone",
+          "text": "Brand declares dark-spot appearance benefit",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lrp-mela-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "partial",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-mela-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-mela-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-mela-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-mela-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-mela-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-mela-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "normalized_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-mela-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-mela-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-mela-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": [
+        "Indexed MY source extract; application area not retained; retinyl palmitate is not retinol"
+      ]
+    },
+    {
+      "product_id": "lrp-retinol-30ml",
+      "family_id": "lrp-retinol",
+      "brand": "La Roche-Posay",
+      "product_name": "Retinol B3 Serum Anti-Wrinkle 30ml",
+      "market": "MY",
+      "category": "skincare",
+      "subcategory": "serum",
+      "product_format": "serum",
+      "application_area": [
+        "face",
+        "neck"
+      ],
+      "finish": null,
+      "raw_ingredients": "AQUA / WATER , GLYCERIN , CYCLOHEXASILOXANE , ALCOHOL DENAT , PENTYLENE GLYCOL , NIACINAMIDE , DIMETHICONE , GLYCINE SOJA OIL / SOYBEAN OIL , PPG-6-DECYLTETRADECETH-30 , SODIUM HYALURONATE RETINOL , ADENOSINE , AMMONIUM POLYACRYLOYLDIMETHYL , TAURATE , CAPRYLYL GLYCOL , CITRIC ACID , TRISODIUM ETHYLENEDIAMINE DISUCCINATE , XANTHAN GUM , POLYS ILICONE-11 , RETINYL PALMITATE TOCOPHEROL , PHENOXYETHANOL , PARFUM / FRAGRANCE.",
+      "normalized_ingredients": [
+        "retinol",
+        "niacinamide",
+        "retinyl palmitate"
+      ],
+      "variant": null,
+      "shade": null,
+      "size": "30ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "radiance",
+          "text": "Retailer reports luminous skin claim",
+          "claim_type": "retailer_reported_brand_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lrp-retinol-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "partial",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-retinol-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-retinol-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-retinol-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-retinol-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-retinol-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-retinol-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-retinol-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-retinol-my-pdp",
+              "basis": "Ingredients section; punctuation retained except bullet delimiters normalized to commas"
+            }
+          ]
+        },
+        "normalized_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-retinol-my-pdp",
+              "basis": "Retinol explicitly named in product heading/benefit text; niacinamide and retinyl palmitate in ingredient section"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-retinol-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lrp-retinol-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": [
+        "Retailer INCI has missing delimiters; only explicitly named ingredients normalized"
+      ]
+    },
+    {
+      "product_id": "mb-teddy-unspecified",
+      "family_id": "mb-teddy",
+      "brand": "Maybelline New York",
+      "product_name": "SUPER STAY TEDDY TINT",
+      "market": "MY",
+      "category": "makeup",
+      "subcategory": "lip_colour",
+      "product_format": "lip_tint",
+      "application_area": [
+        "lips",
+        "cheeks"
+      ],
+      "finish": "matte",
+      "raw_ingredients": null,
+      "normalized_ingredients": null,
+      "variant": null,
+      "shade": null,
+      "size": null,
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "long_wear",
+          "text": "Brand declares long wear",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "mb-teddy-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "unknown",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-teddy-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-teddy-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-teddy-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-teddy-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-teddy-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-teddy-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-teddy-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-teddy-my-pdp",
+              "basis": "PDP description of finish"
+            }
+          ]
+        },
+        "raw_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "normalized_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-teddy-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": [
+        "Shade and size not verified; formula-level unspecified variant, not a purchasable SKU"
+      ]
+    },
+    {
+      "product_id": "mb-vinyl-10-lippy",
+      "family_id": "mb-vinyl",
+      "brand": "Maybelline New York",
+      "product_name": "SUPER STAY VINYL INK",
+      "market": "MY",
+      "category": "makeup",
+      "subcategory": "lip_colour",
+      "product_format": "liquid_lipstick",
+      "application_area": [
+        "lips"
+      ],
+      "finish": "vinyl_shine",
+      "raw_ingredients": "ISODODECANE, DIMETHICONE, TRIMETHYLSILOXYSILICATE, POLYMETHYLSILSESQUIOXANE/ TRIMETHYLSILOXYSILICATE, POLYPROPYLSILSESQUIOXANE, C30-45 ALKYLDIMETHYLSILYL POLYPROPYLSILSESQUIOXANE, TRIMETHYLSILOXYPHENYL DIMETHICONE, TRIMETHYL PENTAPHENYL TRISILOXANE, BIS-STEARYL DIMETHICONE, DIMETHICONOL, TRIHYDROXYSTEARIN, PHENOXYETHANOL, ALUMINA, ETHYLHEXYLGLYCERIN, TOCOPHERYL ACETATE, TRIETHOXYCAPRYLYLSILANE",
+      "normalized_ingredients": [
+        "tocopheryl acetate"
+      ],
+      "variant": null,
+      "shade": "10 LIPPY",
+      "size": null,
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "long_wear",
+          "text": "Brand declares long wear",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        },
+        {
+          "concept": "intense_colour",
+          "text": "Brand declares high-impact colour",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "mb-vinyl-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "partial",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP description of finish"
+            }
+          ]
+        },
+        "raw_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Ingredients section; punctuation retained except bullet delimiters normalized to commas"
+            }
+          ]
+        },
+        "normalized_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP shade selector"
+            }
+          ]
+        },
+        "size": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": [
+        "Shade selector verified from indexed MY PDP; no current stock or shade-specific INCI verified"
+      ]
+    },
+    {
+      "product_id": "mb-vinyl-15-peachy",
+      "family_id": "mb-vinyl",
+      "brand": "Maybelline New York",
+      "product_name": "SUPER STAY VINYL INK",
+      "market": "MY",
+      "category": "makeup",
+      "subcategory": "lip_colour",
+      "product_format": "liquid_lipstick",
+      "application_area": [
+        "lips"
+      ],
+      "finish": "vinyl_shine",
+      "raw_ingredients": "ISODODECANE, DIMETHICONE, TRIMETHYLSILOXYSILICATE, POLYMETHYLSILSESQUIOXANE/ TRIMETHYLSILOXYSILICATE, POLYPROPYLSILSESQUIOXANE, C30-45 ALKYLDIMETHYLSILYL POLYPROPYLSILSESQUIOXANE, TRIMETHYLSILOXYPHENYL DIMETHICONE, TRIMETHYL PENTAPHENYL TRISILOXANE, BIS-STEARYL DIMETHICONE, DIMETHICONOL, TRIHYDROXYSTEARIN, PHENOXYETHANOL, ALUMINA, ETHYLHEXYLGLYCERIN, TOCOPHERYL ACETATE, TRIETHOXYCAPRYLYLSILANE",
+      "normalized_ingredients": [
+        "tocopheryl acetate"
+      ],
+      "variant": null,
+      "shade": "15 PEACHY",
+      "size": null,
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "long_wear",
+          "text": "Brand declares long wear",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        },
+        {
+          "concept": "intense_colour",
+          "text": "Brand declares high-impact colour",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "mb-vinyl-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "partial",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP description of finish"
+            }
+          ]
+        },
+        "raw_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Ingredients section; punctuation retained except bullet delimiters normalized to commas"
+            }
+          ]
+        },
+        "normalized_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP shade selector"
+            }
+          ]
+        },
+        "size": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": [
+        "Shade selector verified from indexed MY PDP; no current stock or shade-specific INCI verified"
+      ]
+    },
+    {
+      "product_id": "mb-vinyl-20-coy",
+      "family_id": "mb-vinyl",
+      "brand": "Maybelline New York",
+      "product_name": "SUPER STAY VINYL INK",
+      "market": "MY",
+      "category": "makeup",
+      "subcategory": "lip_colour",
+      "product_format": "liquid_lipstick",
+      "application_area": [
+        "lips"
+      ],
+      "finish": "vinyl_shine",
+      "raw_ingredients": "ISODODECANE, DIMETHICONE, TRIMETHYLSILOXYSILICATE, POLYMETHYLSILSESQUIOXANE/ TRIMETHYLSILOXYSILICATE, POLYPROPYLSILSESQUIOXANE, C30-45 ALKYLDIMETHYLSILYL POLYPROPYLSILSESQUIOXANE, TRIMETHYLSILOXYPHENYL DIMETHICONE, TRIMETHYL PENTAPHENYL TRISILOXANE, BIS-STEARYL DIMETHICONE, DIMETHICONOL, TRIHYDROXYSTEARIN, PHENOXYETHANOL, ALUMINA, ETHYLHEXYLGLYCERIN, TOCOPHERYL ACETATE, TRIETHOXYCAPRYLYLSILANE",
+      "normalized_ingredients": [
+        "tocopheryl acetate"
+      ],
+      "variant": null,
+      "shade": "20 COY",
+      "size": null,
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "long_wear",
+          "text": "Brand declares long wear",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        },
+        {
+          "concept": "intense_colour",
+          "text": "Brand declares high-impact colour",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "mb-vinyl-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "partial",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP description of finish"
+            }
+          ]
+        },
+        "raw_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Ingredients section; punctuation retained except bullet delimiters normalized to commas"
+            }
+          ]
+        },
+        "normalized_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP shade selector"
+            }
+          ]
+        },
+        "size": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": [
+        "Shade selector verified from indexed MY PDP; no current stock or shade-specific INCI verified"
+      ]
+    },
+    {
+      "product_id": "mb-vinyl-30-unrivaled",
+      "family_id": "mb-vinyl",
+      "brand": "Maybelline New York",
+      "product_name": "SUPER STAY VINYL INK",
+      "market": "MY",
+      "category": "makeup",
+      "subcategory": "lip_colour",
+      "product_format": "liquid_lipstick",
+      "application_area": [
+        "lips"
+      ],
+      "finish": "vinyl_shine",
+      "raw_ingredients": "ISODODECANE, DIMETHICONE, TRIMETHYLSILOXYSILICATE, POLYMETHYLSILSESQUIOXANE/ TRIMETHYLSILOXYSILICATE, POLYPROPYLSILSESQUIOXANE, C30-45 ALKYLDIMETHYLSILYL POLYPROPYLSILSESQUIOXANE, TRIMETHYLSILOXYPHENYL DIMETHICONE, TRIMETHYL PENTAPHENYL TRISILOXANE, BIS-STEARYL DIMETHICONE, DIMETHICONOL, TRIHYDROXYSTEARIN, PHENOXYETHANOL, ALUMINA, ETHYLHEXYLGLYCERIN, TOCOPHERYL ACETATE, TRIETHOXYCAPRYLYLSILANE",
+      "normalized_ingredients": [
+        "tocopheryl acetate"
+      ],
+      "variant": null,
+      "shade": "30 UNRIVALED",
+      "size": null,
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "long_wear",
+          "text": "Brand declares long wear",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        },
+        {
+          "concept": "intense_colour",
+          "text": "Brand declares high-impact colour",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "mb-vinyl-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "partial",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP description of finish"
+            }
+          ]
+        },
+        "raw_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Ingredients section; punctuation retained except bullet delimiters normalized to commas"
+            }
+          ]
+        },
+        "normalized_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP shade selector"
+            }
+          ]
+        },
+        "size": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": [
+        "Shade selector verified from indexed MY PDP; no current stock or shade-specific INCI verified"
+      ]
+    },
+    {
+      "product_id": "mb-vinyl-35-cheeky",
+      "family_id": "mb-vinyl",
+      "brand": "Maybelline New York",
+      "product_name": "SUPER STAY VINYL INK",
+      "market": "MY",
+      "category": "makeup",
+      "subcategory": "lip_colour",
+      "product_format": "liquid_lipstick",
+      "application_area": [
+        "lips"
+      ],
+      "finish": "vinyl_shine",
+      "raw_ingredients": "ISODODECANE, DIMETHICONE, TRIMETHYLSILOXYSILICATE, POLYMETHYLSILSESQUIOXANE/ TRIMETHYLSILOXYSILICATE, POLYPROPYLSILSESQUIOXANE, C30-45 ALKYLDIMETHYLSILYL POLYPROPYLSILSESQUIOXANE, TRIMETHYLSILOXYPHENYL DIMETHICONE, TRIMETHYL PENTAPHENYL TRISILOXANE, BIS-STEARYL DIMETHICONE, DIMETHICONOL, TRIHYDROXYSTEARIN, PHENOXYETHANOL, ALUMINA, ETHYLHEXYLGLYCERIN, TOCOPHERYL ACETATE, TRIETHOXYCAPRYLYLSILANE",
+      "normalized_ingredients": [
+        "tocopheryl acetate"
+      ],
+      "variant": null,
+      "shade": "35 CHEEKY",
+      "size": null,
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "long_wear",
+          "text": "Brand declares long wear",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        },
+        {
+          "concept": "intense_colour",
+          "text": "Brand declares high-impact colour",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "mb-vinyl-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "partial",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP description of finish"
+            }
+          ]
+        },
+        "raw_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Ingredients section; punctuation retained except bullet delimiters normalized to commas"
+            }
+          ]
+        },
+        "normalized_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "PDP shade selector"
+            }
+          ]
+        },
+        "size": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-vinyl-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": [
+        "Shade selector verified from indexed MY PDP; no current stock or shade-specific INCI verified"
+      ]
+    },
+    {
+      "product_id": "mb-ultimatte-1099-more-peach",
+      "family_id": "mb-ultimatte",
+      "brand": "Maybelline New York",
+      "product_name": "COLOR SENSATIONAL ULTIMATTE",
+      "market": "MY",
+      "category": "makeup",
+      "subcategory": "lip_colour",
+      "product_format": "bullet_lipstick",
+      "application_area": [
+        "lips"
+      ],
+      "finish": "matte",
+      "raw_ingredients": null,
+      "normalized_ingredients": null,
+      "variant": null,
+      "shade": "1099 MORE PEACH",
+      "size": null,
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "intense_colour",
+          "text": "Brand declares intense colour",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "mb-ultimatte-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "unknown",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "PDP description of finish"
+            }
+          ]
+        },
+        "raw_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "normalized_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "PDP shade selector"
+            }
+          ]
+        },
+        "size": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": []
+    },
+    {
+      "product_id": "mb-ultimatte-1199-more-almond",
+      "family_id": "mb-ultimatte",
+      "brand": "Maybelline New York",
+      "product_name": "COLOR SENSATIONAL ULTIMATTE",
+      "market": "MY",
+      "category": "makeup",
+      "subcategory": "lip_colour",
+      "product_format": "bullet_lipstick",
+      "application_area": [
+        "lips"
+      ],
+      "finish": "matte",
+      "raw_ingredients": null,
+      "normalized_ingredients": null,
+      "variant": null,
+      "shade": "1199 MORE ALMOND",
+      "size": null,
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "intense_colour",
+          "text": "Brand declares intense colour",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "mb-ultimatte-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "unknown",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "PDP description of finish"
+            }
+          ]
+        },
+        "raw_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "normalized_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "PDP shade selector"
+            }
+          ]
+        },
+        "size": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-ultimatte-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": []
+    },
+    {
+      "product_id": "mb-fresh-unspecified",
+      "family_id": "mb-fresh",
+      "brand": "Maybelline New York",
+      "product_name": "FIT ME FRESH TINT",
+      "market": "MY",
+      "category": "makeup",
+      "subcategory": "foundation",
+      "product_format": "skin_tint",
+      "application_area": [
+        "face"
+      ],
+      "finish": "radiant",
+      "raw_ingredients": null,
+      "normalized_ingredients": null,
+      "variant": null,
+      "shade": null,
+      "size": null,
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "radiance",
+          "text": "Brand declares radiant appearance",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "mb-fresh-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "unknown",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-fresh-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-fresh-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-fresh-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-fresh-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-fresh-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-fresh-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-fresh-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-fresh-my-pdp",
+              "basis": "PDP description of finish"
+            }
+          ]
+        },
+        "raw_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "normalized_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "mb-fresh-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": [
+        "Shade and size unverified; face skin tint, not lip tint"
+      ]
+    },
+    {
+      "product_id": "lp-foundation-253",
+      "family_id": "lp-foundation",
+      "brand": "L'Oreal Paris",
+      "product_name": "Infallible 32H Matte Cover Liquid Foundation",
+      "market": "MY",
+      "category": "makeup",
+      "subcategory": "foundation",
+      "product_format": "foundation",
+      "application_area": [
+        "face"
+      ],
+      "finish": "matte",
+      "raw_ingredients": null,
+      "normalized_ingredients": [
+        "niacinamide"
+      ],
+      "variant": null,
+      "shade": "253",
+      "size": null,
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "long_wear",
+          "text": "Brand declares long wear",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lp-foundation-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "partial",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-foundation-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-foundation-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-foundation-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-foundation-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-foundation-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-foundation-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-foundation-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-foundation-my-pdp",
+              "basis": "PDP description of finish"
+            }
+          ]
+        },
+        "raw_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "normalized_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-foundation-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-foundation-my-pdp",
+              "basis": "PDP shade selector"
+            }
+          ]
+        },
+        "size": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-foundation-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": []
+    },
+    {
+      "product_id": "lp-gold-100ml",
+      "family_id": "lp-gold",
+      "brand": "L'Oreal Paris",
+      "product_name": "Elseve Extraordinary Oil GOLD",
+      "market": "MY",
+      "category": "haircare",
+      "subcategory": "hair_treatment",
+      "product_format": "hair_oil",
+      "application_area": [
+        "hair_lengths",
+        "hair_ends"
+      ],
+      "finish": null,
+      "raw_ingredients": "ISODODECANE, CAPRYLIC/CAPRIC TRIGLYCERIDE, DIMETHICONE, DICAPRYLYL ETHER, DIMETHICONOL, TRIMETHYLSILOXYSILICATE, CHAMOMILLA RECUTITA FLOWER EXTRACT / MATRICARIA FLOWER EXTRACT, COCOS NUCIFERA OIL / COCONUT OIL, TOCOPHEROL, ETHYLHEXYL SALICYLATE, HELIANTHUS ANNUUS SEED OIL / SUNFLOWER SEED OIL, NELUMBO NUCIFERA FLOWER EXTRACT, LIMONENE, LINUM USITATISSIMUM FLOWER EXTRACT / LINSEED FLOWER EXTRACT, ISOEUGENOL, CAPRYLIC/CAPRIC GLYCERIDES, HIPPOPHAE RHAMNOIDES SEED OIL, PARFUM / FRAGRANCE, GARDENIA TAITENSIS FLOWER, FARNESOL, BISABOLOL, ROSA CANINA FLOWER EXTRACT, CITRAL, SQUALANE.",
+      "normalized_ingredients": [
+        "isododecane",
+        "caprylic/capric triglyceride",
+        "dimethicone",
+        "dicaprylyl ether",
+        "dimethiconol",
+        "trimethylsiloxysilicate",
+        "chamomilla recutita flower extract / matricaria flower extract",
+        "cocos nucifera oil / coconut oil",
+        "tocopherol",
+        "ethylhexyl salicylate",
+        "helianthus annuus seed oil / sunflower seed oil",
+        "nelumbo nucifera flower extract",
+        "limonene",
+        "linum usitatissimum flower extract / linseed flower extract",
+        "isoeugenol",
+        "caprylic/capric glycerides",
+        "hippophae rhamnoides seed oil",
+        "parfum / fragrance",
+        "gardenia taitensis flower",
+        "farnesol",
+        "bisabolol",
+        "rosa canina flower extract",
+        "citral",
+        "squalane"
+      ],
+      "variant": "Gold",
+      "shade": null,
+      "size": "100ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "shine",
+          "text": "Brand declares shine",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        },
+        {
+          "concept": "smoothing",
+          "text": "Brand declares smoothing",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lp-gold-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "complete",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "Ingredients section; punctuation retained except bullet delimiters normalized to commas"
+            }
+          ]
+        },
+        "normalized_ingredients": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "PDP product name/selector"
+            }
+          ]
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": []
+    },
+    {
+      "product_id": "lp-gold-30ml",
+      "family_id": "lp-gold",
+      "brand": "L'Oreal Paris",
+      "product_name": "Elseve Extraordinary Oil GOLD",
+      "market": "MY",
+      "category": "haircare",
+      "subcategory": "hair_treatment",
+      "product_format": "hair_oil",
+      "application_area": [
+        "hair_lengths",
+        "hair_ends"
+      ],
+      "finish": null,
+      "raw_ingredients": "ISODODECANE, CAPRYLIC/CAPRIC TRIGLYCERIDE, DIMETHICONE, DICAPRYLYL ETHER, DIMETHICONOL, TRIMETHYLSILOXYSILICATE, CHAMOMILLA RECUTITA FLOWER EXTRACT / MATRICARIA FLOWER EXTRACT, COCOS NUCIFERA OIL / COCONUT OIL, TOCOPHEROL, ETHYLHEXYL SALICYLATE, HELIANTHUS ANNUUS SEED OIL / SUNFLOWER SEED OIL, NELUMBO NUCIFERA FLOWER EXTRACT, LIMONENE, LINUM USITATISSIMUM FLOWER EXTRACT / LINSEED FLOWER EXTRACT, ISOEUGENOL, CAPRYLIC/CAPRIC GLYCERIDES, HIPPOPHAE RHAMNOIDES SEED OIL, PARFUM / FRAGRANCE, GARDENIA TAITENSIS FLOWER, FARNESOL, BISABOLOL, ROSA CANINA FLOWER EXTRACT, CITRAL, SQUALANE.",
+      "normalized_ingredients": [
+        "isododecane",
+        "caprylic/capric triglyceride",
+        "dimethicone",
+        "dicaprylyl ether",
+        "dimethiconol",
+        "trimethylsiloxysilicate",
+        "chamomilla recutita flower extract / matricaria flower extract",
+        "cocos nucifera oil / coconut oil",
+        "tocopherol",
+        "ethylhexyl salicylate",
+        "helianthus annuus seed oil / sunflower seed oil",
+        "nelumbo nucifera flower extract",
+        "limonene",
+        "linum usitatissimum flower extract / linseed flower extract",
+        "isoeugenol",
+        "caprylic/capric glycerides",
+        "hippophae rhamnoides seed oil",
+        "parfum / fragrance",
+        "gardenia taitensis flower",
+        "farnesol",
+        "bisabolol",
+        "rosa canina flower extract",
+        "citral",
+        "squalane"
+      ],
+      "variant": "Gold",
+      "shade": null,
+      "size": "30ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "shine",
+          "text": "Brand declares shine",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        },
+        {
+          "concept": "smoothing",
+          "text": "Brand declares smoothing",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lp-gold-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "complete",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "Ingredients section; punctuation retained except bullet delimiters normalized to commas"
+            }
+          ]
+        },
+        "normalized_ingredients": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "PDP product name/selector"
+            }
+          ]
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-gold-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": []
+    },
+    {
+      "product_id": "lp-pink-100ml",
+      "family_id": "lp-pink",
+      "brand": "L'Oreal Paris",
+      "product_name": "Elseve Extraordinary Oil Pink",
+      "market": "MY",
+      "category": "haircare",
+      "subcategory": "hair_treatment",
+      "product_format": "hair_oil",
+      "application_area": [
+        "hair_lengths",
+        "hair_ends"
+      ],
+      "finish": null,
+      "raw_ingredients": null,
+      "normalized_ingredients": null,
+      "variant": "Pink",
+      "shade": null,
+      "size": "100ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "smoothing",
+          "text": "Brand declares frizz control",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lp-pink-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "unknown",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "normalized_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "variant": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "PDP product name/selector"
+            }
+          ]
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": true,
+      "quality_warnings": [
+        "Source identity/INCI consistency requires manual verification: hair oil heading with surfactant-rich ingredient block; excluded from matches"
+      ]
+    },
+    {
+      "product_id": "lp-pink-30ml",
+      "family_id": "lp-pink",
+      "brand": "L'Oreal Paris",
+      "product_name": "Elseve Extraordinary Oil Pink",
+      "market": "MY",
+      "category": "haircare",
+      "subcategory": "hair_treatment",
+      "product_format": "hair_oil",
+      "application_area": [
+        "hair_lengths",
+        "hair_ends"
+      ],
+      "finish": null,
+      "raw_ingredients": null,
+      "normalized_ingredients": null,
+      "variant": "Pink",
+      "shade": null,
+      "size": "30ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "smoothing",
+          "text": "Brand declares frizz control",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lp-pink-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "unknown",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "normalized_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "variant": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "PDP product name/selector"
+            }
+          ]
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-pink-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": true,
+      "quality_warnings": [
+        "Source identity/INCI consistency requires manual verification: hair oil heading with surfactant-rich ingredient block; excluded from matches"
+      ]
+    },
+    {
+      "product_id": "lp-brown-100ml",
+      "family_id": "lp-brown",
+      "brand": "L'Oreal Paris",
+      "product_name": "Elseve Extraordinary Oil Brown",
+      "market": "MY",
+      "category": "haircare",
+      "subcategory": "hair_treatment",
+      "product_format": "hair_oil",
+      "application_area": [
+        "hair_lengths",
+        "hair_ends"
+      ],
+      "finish": null,
+      "raw_ingredients": null,
+      "normalized_ingredients": null,
+      "variant": "Brown",
+      "shade": null,
+      "size": "100ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "shine",
+          "text": "Brand declares shine",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lp-brown-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "unknown",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-brown-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-brown-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-brown-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-brown-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-brown-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-brown-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-brown-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "normalized_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "variant": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-brown-my-pdp",
+              "basis": "PDP product name/selector"
+            }
+          ]
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-brown-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-brown-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": []
+    },
+    {
+      "product_id": "lp-rose-100ml",
+      "family_id": "lp-rose",
+      "brand": "L'Oreal Paris",
+      "product_name": "Elseve Extraordinary Floral Oil Rose",
+      "market": "MY",
+      "category": "haircare",
+      "subcategory": "hair_treatment",
+      "product_format": "hair_oil",
+      "application_area": [
+        "hair_lengths",
+        "hair_ends"
+      ],
+      "finish": null,
+      "raw_ingredients": null,
+      "normalized_ingredients": null,
+      "variant": "Rose",
+      "shade": null,
+      "size": "100ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "shine",
+          "text": "Brand declares shine",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lp-rose-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "unknown",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-rose-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-rose-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-rose-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-rose-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-rose-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-rose-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-rose-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "normalized_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "variant": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-rose-my-pdp",
+              "basis": "PDP product name/selector"
+            }
+          ]
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-rose-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-rose-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": []
+    },
+    {
+      "product_id": "lp-conditioner-440ml",
+      "family_id": "lp-conditioner",
+      "brand": "L'Oreal Paris",
+      "product_name": "Elseve Extraordinary Oil Smooth Conditioner",
+      "market": "MY",
+      "category": "haircare",
+      "subcategory": "conditioner",
+      "product_format": "conditioner",
+      "application_area": [
+        "hair_lengths",
+        "hair_ends"
+      ],
+      "finish": null,
+      "raw_ingredients": null,
+      "normalized_ingredients": null,
+      "variant": null,
+      "shade": null,
+      "size": "440ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "smoothing",
+          "text": "Brand declares smoothing",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lp-conditioner-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "unknown",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-conditioner-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-conditioner-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-conditioner-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-conditioner-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-conditioner-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-conditioner-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-conditioner-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "normalized_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-conditioner-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-conditioner-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": [
+        "Usage explicitly avoids scalp; oil in name does not make this a hair oil"
+      ]
+    },
+    {
+      "product_id": "lp-shampoo-440ml",
+      "family_id": "lp-shampoo",
+      "brand": "L'Oreal Paris",
+      "product_name": "Elseve Extraordinary Oil Smooth Shampoo",
+      "market": "MY",
+      "category": "haircare",
+      "subcategory": "shampoo",
+      "product_format": "shampoo",
+      "application_area": [
+        "hair_lengths"
+      ],
+      "finish": null,
+      "raw_ingredients": null,
+      "normalized_ingredients": null,
+      "variant": null,
+      "shade": null,
+      "size": "440ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "smoothing",
+          "text": "Brand declares smoothing",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lp-shampoo-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "unknown",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-shampoo-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-shampoo-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-shampoo-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-shampoo-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-shampoo-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-shampoo-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-shampoo-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "normalized_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-shampoo-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-shampoo-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": []
+    },
+    {
+      "product_id": "lp-scalp-90ml",
+      "family_id": "lp-scalp",
+      "brand": "L'Oreal Paris",
+      "product_name": "Elseve Full Resist Anti Hair Fall Scalp Essence",
+      "market": "MY",
+      "category": "haircare",
+      "subcategory": "scalp_treatment",
+      "product_format": "scalp_essence",
+      "application_area": [
+        "scalp"
+      ],
+      "finish": null,
+      "raw_ingredients": "AQUA / WATER, ALCOHOL, DIAMINOPYRIMIDINE OXIDELACTIC ACID TOCOPHEROL, SODIUM HYALURONATE, SODIUM CITRATE, CAFFEINE, SAFFLOWER GLUCOSIDE, PEG-40 HYDROGENATED CASTOR OILARGININE, AMINOMETHYL PROPANOL, MENTHOL LINALOOL BENZYL SALICYLATE, BENZYL ALCOHOL, PARFUM / FRAGRANCE, ACRYLATES / BEHENETH-25 METHACRYLATE COPOLYMERPIROCTONE OLAMINECITRONELLOL, LAVANDULA HYBRIDA OIL, GLYCERIN",
+      "normalized_ingredients": [
+        "caffeine",
+        "arginine"
+      ],
+      "variant": null,
+      "shade": null,
+      "size": "90ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "scalp_care",
+          "text": "Brand positions essence as scalp care",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lp-scalp-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "partial",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-scalp-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-scalp-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-scalp-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-scalp-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-scalp-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-scalp-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-scalp-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-scalp-my-pdp",
+              "basis": "Ingredients section; punctuation retained except bullet delimiters normalized to commas"
+            }
+          ]
+        },
+        "normalized_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-scalp-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-scalp-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-scalp-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": [
+        "Malformed source INCI; full list not normalized; quantitative hair-growth claims not adopted"
+      ]
+    },
+    {
+      "product_id": "lp-full-resist-440ml",
+      "family_id": "lp-full-resist",
+      "brand": "L'Oreal Paris",
+      "product_name": "Elseve Full Resist Shampoo|Anti Hair Loss/Anti Dandruff/Hair Fall Control",
+      "market": "MY",
+      "category": "haircare",
+      "subcategory": "shampoo",
+      "product_format": "shampoo",
+      "application_area": [
+        "scalp"
+      ],
+      "finish": null,
+      "raw_ingredients": null,
+      "normalized_ingredients": [
+        "caffeine",
+        "arginine"
+      ],
+      "variant": null,
+      "shade": null,
+      "size": "440ml",
+      "occasions": null,
+      "manufacturer_claims": [
+        {
+          "concept": "scalp_cleansing",
+          "text": "Brand declares scalp cleansing",
+          "claim_type": "manufacturer_claim",
+          "independently_verified": false
+        }
+      ],
+      "catalogue_version": "my-curated-2026-10-15-v1",
+      "source_id": "lp-full-resist-my-pdp",
+      "verified_on": "2026-10-15",
+      "ingredient_completeness": "partial",
+      "field_quality": {
+        "brand": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-full-resist-my-pdp",
+              "basis": "PDP brand"
+            }
+          ]
+        },
+        "product_name": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-full-resist-my-pdp",
+              "basis": "PDP displayed product heading"
+            }
+          ]
+        },
+        "market": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-full-resist-my-pdp",
+              "basis": "Malaysian brand/retailer domain (listing, not stock)"
+            }
+          ]
+        },
+        "category": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-full-resist-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "subcategory": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-full-resist-my-pdp",
+              "basis": "Curated taxonomy from PDP product type"
+            }
+          ]
+        },
+        "product_format": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-full-resist-my-pdp",
+              "basis": "PDP product name/details"
+            }
+          ]
+        },
+        "application_area": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-full-resist-my-pdp",
+              "basis": "Usage/application section or explicit product application in title"
+            }
+          ]
+        },
+        "finish": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "raw_ingredients": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "normalized_ingredients": {
+          "state": "partial",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-full-resist-my-pdp",
+              "basis": "Exact INCI tokens; explicit curated key ingredients if full list unavailable"
+            }
+          ]
+        },
+        "variant": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "shade": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        },
+        "size": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-full-resist-my-pdp",
+              "basis": "PDP size selector"
+            }
+          ]
+        },
+        "manufacturer_claims": {
+          "state": "verified",
+          "reason": null,
+          "evidence": [
+            {
+              "source_id": "lp-full-resist-my-pdp",
+              "basis": "Product details/benefits; concise paraphrase, not measured efficacy"
+            }
+          ]
+        },
+        "occasions": {
+          "state": "unknown",
+          "reason": "Not verified in curated source extract",
+          "evidence": []
+        }
+      },
+      "requires_review": false,
+      "quality_warnings": [
+        "Generic ingredient tiles ignored; only product-specific ingredients retained"
+      ]
+    }
+  ]
+}

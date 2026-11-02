@@ -1,0 +1,17 @@
+<section class="tz-creators" data-creator-topic="{{ trend.id }}" aria-labelledby="product-fit-heading">
+    <header class="product-fit-heading"><p class="product-eyebrow">Connect the signal / Product Fit</p><h2 id="product-fit-heading">Find a fitting product</h2><p>Source-backed compatibility for {{ trend.name }}. Choose a product to see its creator context.</p><p>Product and creator context uses the canonical query, independently of any trend-query selection above.</p></header>
+    <form class="tz-creator-controls" hidden>
+        <label>Product Fit context<select name="product_id" required><option value="">Select a positive product</option></select></label>
+        <label>MY audience evidence<select name="required_market_evidence"><option value="optional">Allow unknown evidence</option><option value="verified">Require verified audience</option></select></label>
+        <label>Engagement evidence<select name="engagement_requirement"><option value="optional">Optional</option><option value="available">Descriptive evidence available</option><option value="five_valid_samples">At least 5 valid samples</option></select></label>
+        <button type="submit">View candidates</button>
+    </form>
+    <div class="selected-product" hidden aria-live="polite"></div>
+    <details class="creator-provenance-panel"><summary>Product Fit version &amp; method</summary><p class="tz-creator-context"></p><p>Direct and supporting fit describe evidence-backed compatibility, not measured efficacy or campaign performance. Context pins and matching rules are unchanged.</p></details>
+    <div class="creator-results-heading"><p class="product-eyebrow">From compatibility to collaboration</p><h2 id="creator-heading">Creator Candidates</h2><p>Relevant reviewed evidence for this trend &times; product. No global creator rank.</p></div>
+    <p class="tz-creator-disclosure">Assisted review, not independent human gold. Candidacy does not establish product use, endorsement or audience geography. Reviewed topic evidence is not independent per-video explicit/proxy validation.</p>
+    <p class="tz-creator-status" role="status" aria-live="polite">Loading frozen Product Fit context...</p>
+    <div class="tz-creator-error" role="alert" hidden><p></p><button type="button">Retry</button></div>
+    <p class="tz-creator-order" hidden>Presentation order: evidence state, then creator ID. Not relative merit.</p>
+    <div class="tz-creator-results" aria-busy="false"></div>
+</section>

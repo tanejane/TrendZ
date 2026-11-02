@@ -1,0 +1,157 @@
+{
+  "pilot_topics": 8,
+  "pilot_topic_ids": [
+    "niacinamide",
+    "retinol",
+    "skin-barrier",
+    "hair-scalp-care",
+    "lip-tint",
+    "glass-skin",
+    "deepavali-glam",
+    "hair-oil"
+  ],
+  "configured_topics": 18,
+  "creator_profiles": 40,
+  "sampled_public_creator_video_ids": 747,
+  "catalogue_products": 32,
+  "fixed_product_review_pairs": 256,
+  "creator_profile_review_units": 40,
+  "creator_affinity_review_units": 64,
+  "creator_review_units": 104,
+  "creator_review_basis": {
+    "assisted_review": 102,
+    "human_evidence_review": 2
+  },
+  "python_tests_discovered": 339,
+  "assistant_internal_tools": 9,
+  "measured_source_coverage": [
+    {
+      "source": "google_trends",
+      "observations": 784,
+      "first_date": "2026-08-19",
+      "last_date": "2026-10-13"
+    },
+    {
+      "source": "youtube",
+      "observations": 809,
+      "first_date": "2026-08-19",
+      "last_date": "2026-10-14"
+    }
+  ],
+  "immutable_youtube_runs_in_pilot_db": 49,
+  "product_evidence_cleanup_metrics": {
+    "before": {
+      "precision_at_5": 0.6,
+      "precision_at_5_topics_defined": 8,
+      "ndcg_at_5": 0.9173950256592021,
+      "ndcg_at_5_topics_defined": 8,
+      "catalogue_bounded_recall": 0.7898674242424243,
+      "catalogue_bounded_recall_topics_defined": 8,
+      "false_positives": 0,
+      "false_negatives": 13,
+      "abstention_rate": 0.078125,
+      "unsupported_rate": 0.13333333333333333
+    },
+    "after": {
+      "precision_at_5": 0.625,
+      "precision_at_5_topics_defined": 8,
+      "ndcg_at_5": 0.9441433087510179,
+      "ndcg_at_5_topics_defined": 8,
+      "catalogue_bounded_recall": 0.8646780303030303,
+      "catalogue_bounded_recall_topics_defined": 8,
+      "false_positives": 0,
+      "false_negatives": 8,
+      "abstention_rate": 0.0546875,
+      "unsupported_rate": null
+    }
+  },
+  "product_explanation_audit": {
+    "expanded_checks": {
+      "total": 35,
+      "supported": 31,
+      "unsupported": 4,
+      "support_rate": 0.8857142857142857,
+      "unsupported_rate": 0.11428571428571428
+    },
+    "original_cohort": {
+      "total": 30,
+      "supported": 26,
+      "unsupported": 4,
+      "support_rate": 0.8666666666666667,
+      "unsupported_rate": 0.13333333333333333
+    }
+  },
+  "creator_profile_agreement": {
+    "definition": "Exact domain AND specialization set agreement on non-abstaining rows with a nonempty proposal",
+    "matches": 13,
+    "comparable": 24,
+    "rate": 0.5416666666666666,
+    "no_profile_proposal": 13
+  },
+  "creator_specializations": {
+    "true_positive": 26,
+    "false_positive": 10,
+    "false_negative": 14,
+    "precision": 0.7222222222222222,
+    "human_label_coverage_recall": 0.65,
+    "proposal_coverage_among_answered_profiles": 0.6216216216216216,
+    "profiles_with_human_specializations": 29,
+    "answered_profiles": 37
+  },
+  "creator_original_readiness_groups": {
+    "review_ready": 24,
+    "insufficient": 16
+  },
+  "product_method_unchanged": true,
+  "product_pins": {
+    "product_fit_version": "product-fit-rules-1",
+    "catalogue_version": "my-curated-2026-10-16-evidence-v1",
+    "review_revision_hash": "9235148176a44bc5ec32721c5d4abfd40928d1845538f979f19619cc75219666",
+    "creator_policy_version": "creator-candidate-h1-v1"
+  },
+  "independent_validation": false,
+  "live_llm_provider": "intentionally_deferred",
+  "campaign_economics": "deterministic, assumption-based ROI / sensitivity / break-even",
+  "source_sha256": {
+    "data/pilot_phase2.json": "5e333e56a132f6882c3648560e35a7de618a002d2d27748764b977cc587995a5",
+    "reports/phase4d-lite/catalogue_hardened_v1.json": "e7149ab0a2ce4abdfd3b9cf747847ec4e20e3783c60fcc8acea07bfd49894c04",
+    "reports/phase5b/live-initial/review_dataset.json": "353594b06e4c8b709002231732bf0843f1e0d9e57d5560fe16eb83bb86b25205",
+    "reports/phase5c/final-v1/creator_profile_review_export.json": "995aefeeb756f0e88169af5071651bc3840b68d7db69f7ca9486799ac249fe6c",
+    "reports/phase5c/final-v1/creator_affinity_review_export.json": "b23d915e741a05fea726ce83fc515804b2e5de2cf195149561c6c550648d9f6f",
+    "reports/phase4d-lite/rerun.json": "90e24243886a20209058a2f8f338a1b5546803e49c2cded7352eac6e11b6e526",
+    "reports/phase4d-lite/metrics_summary.json": "50d08074da11ef941235f0797dbefb425f25bb9c7f94e09cdbf01055edf4b103",
+    "reports/phase4d-lite/explanation_support_final.json": "0e1e422c11133c778d0c4f8af3b3834736593dd8f6ab10f75403bf79702e62be",
+    "reports/phase5c/final-v1/validation-9235148176a44bc5.json": "6d14004663ef514012426b94e7658bc3ebce8a9cb2dac23ad26cc55bb5638e13",
+    "reports/phase4d-lite/predictions_after.json": "3f6e5d9d989bbed51141aec6090693f98f1e10c8e890e58f544def28447c4e8d",
+    "reports/phase2-measured/pilot.sqlite3": "3e634a39673b84945b71040023abdd18c2b2fda65619655953b17ffd0dac501a",
+    "data/tracked_topics.json": "b6fa00e35b1f4154a94f3c99d0464b9e654e39b3a0b6925a5e3f0a808bc022bc",
+    "reports/phase8a/final_verification.json": "29a126f2b97d21c322a7bcbbc5588dca842b504f0a0472a595bfd3ba019a6ab5"
+  },
+  "executed_verification": {
+    "python": {
+      "passed": 339,
+      "failed": 0,
+      "seconds": 187.192,
+      "new_presentation_checks": 6
+    },
+    "javascript_unit_tests": {
+      "passed": 14,
+      "failed": 0
+    },
+    "assistant_harness": {
+      "passed": 32,
+      "total": 32,
+      "model_quality_evaluated": false
+    },
+    "browser_checks": {
+      "intelligence": 15,
+      "creator_candidates": 13,
+      "campaign_scenarios": 10,
+      "original_product_browser": 11,
+      "assistant_isolation": 4,
+      "measured_journey": 12,
+      "total": 65,
+      "page_errors": 0
+    }
+  }
+}

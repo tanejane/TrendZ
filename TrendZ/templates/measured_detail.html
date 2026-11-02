@@ -1,0 +1,19 @@
+<main class="product-main" data-topic-id="{{ trend.id }}">
+    <div class="detail-breadcrumb"><a href="/?view=explore">Explore Trends</a><i data-feather="chevron-right" aria-hidden="true"></i><span>{{ trend.name }}</span></div>
+    <header class="detail-heading"><div><p class="product-eyebrow">{{ trend.category }} / {{ trend.market }}</p><h1>{{ trend.name }}</h1><p>Understand the signal. Connect the right product and creator context.</p></div>
+    <div class="detail-actions"><button type="button" data-save-topic="{{ trend.id }}" aria-pressed="false"><i data-feather="bookmark" aria-hidden="true"></i><span>Save trend</span></button><a class="primary-link" href="#product-fit-heading">Explore product fit <i data-feather="arrow-right" aria-hidden="true"></i></a></div></header>
+    <p id="detail-save-status" class="tz-methodology" role="status" aria-live="polite"></p>
+    {% include 'product_journey.html' %}
+    {% include 'intelligence_dimensions.html' %}
+    {% include 'creator_candidates.html' %}
+    <details class="detail-method"><summary>Additional source-series diagnostics</summary>
+        <p>Evidence dimensions are reported separately. No combined score, lifecycle or forecast is assigned.</p>
+        {% for series in trend.metrics.series %}<section><h3>{{ series.source }} / {{ series.metric }}</h3><p>Observation window ends {{ series.as_of }}. {{ series.history_days }} observed days.</p><dl>
+            {% for key in ['recent_growth','acceleration','persistence','volatility'] %}<div><dt>{{ key.replace('_',' ').title() }}</dt><dd>{{ series[key].value if series[key].state == 'available' else 'Unavailable' }} {{ series[key].unit or series[key].reason }}</dd></div>{% endfor %}
+        </dl></section>{% else %}<p>No measured history yet.</p>{% endfor %}
+        <p>Legacy cross-source diagnostic: {{ trend.metrics.cross_source_confirmation.value if trend.metrics.cross_source_confirmation.state == 'available' else trend.metrics.cross_source_confirmation.reason }}</p>
+    </details>
+    <details class="detail-method"><summary>Source provenance</summary><div style="overflow:auto"><table><thead><tr><th>Source</th><th>Identifier</th><th>Market</th><th>Date</th><th>Retrieved</th></tr></thead><tbody>{% for row in trend.provenance %}<tr><td>{{ row.source }}</td><td>{{ row.source_identifier }}</td><td>{{ row.market }}</td><td>{{ row.observation_date }}</td><td>{{ row.retrieved_at }}</td></tr>{% endfor %}</tbody></table></div></details>
+    <div class="detail-method"><a href="/roi-insights">Open assumption-based ROI scenario</a> &middot; <a href="#intelligence-heading">Review structured evidence</a> &middot; <a href="/">Back to Dashboard</a></div>
+    {% include 'product_footer.html' %}
+</main>

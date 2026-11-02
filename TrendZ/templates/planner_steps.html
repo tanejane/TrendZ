@@ -1,0 +1,5 @@
+<ol class="planner-progress" aria-label="Campaign planning progress" data-planner-step="{{ 4 if request.path == '/campaign-scenario' else 2 if trend else 1 }}">
+    {% for label in ['Select trend','Compatible product','Creator candidate','Set assumptions','Review scenario'] %}
+    <li data-step="{{ loop.index }}"><span class="step-number">{{ loop.index }}</span><span>{{ label }}</span></li>
+    {% endfor %}
+</ol>

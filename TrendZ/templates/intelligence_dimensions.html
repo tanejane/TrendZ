@@ -1,0 +1,18 @@
+<section class="tz-intelligence" data-intelligence-topic="{{ trend.id }}" aria-labelledby="intelligence-heading">
+    <div class="tz-intelligence-heading">
+        <div>
+            <h2 id="intelligence-heading">Measured Intelligence</h2>
+            <p class="tz-methodology">Available means supported at the current evidence scope, not validated market truth.</p>
+        </div>
+        <label class="tz-query-control" hidden>
+            <span>Query</span>
+            <select aria-label="Intelligence query"></select>
+        </label>
+    </div>
+    <p class="tz-intelligence-status" role="status" aria-live="polite">Loading measured intelligence...</p>
+    <div class="tz-intelligence-error" role="alert" hidden>
+        <p>Measured intelligence could not be loaded.</p>
+        <button type="button" class="tz-intelligence-retry">Retry</button>
+    </div>
+    <div class="tz-dimensions" aria-busy="true"></div>
+</section>

@@ -1,0 +1,20 @@
+[
+  {"id":"glass-skin","name":"Glass Skin","query":"glass skin","category":"skincare","market":"MY","aliases":[{"id":"routine","query":"glass skin routine"}]},
+  {"id":"sunscreen-reapply","name":"Sunscreen Reapply","query":"sunscreen reapplication","category":"skincare","market":"MY"},
+  {"id":"deepavali-glam","name":"Deepavali Glam","query":"Deepavali makeup","category":"makeup","market":"MY","aliases":[{"id":"glam","query":"Deepavali glam"},{"id":"diwali","query":"Diwali makeup"}]},
+  {"id":"hair-scalp-care","name":"Scalp Care Reset","query":"scalp care","category":"haircare","market":"MY","aliases":[{"id":"treatment","query":"scalp treatment"}]},
+  {"id":"quiet-luxury-beauty","name":"Quiet Luxury Beauty","query":"quiet luxury makeup","category":"makeup","market":"MY"},
+  {"id":"niacinamide","name":"Niacinamide","query":"niacinamide serum","category":"skincare","market":"MY","aliases":[{"id":"broad","query":"niacinamide"}]},
+  {"id":"hyaluronic-acid","name":"Hyaluronic Acid","query":"hyaluronic acid serum","category":"skincare","market":"MY"},
+  {"id":"retinol","name":"Retinol","query":"retinol skincare","category":"skincare","market":"MY","aliases":[{"id":"broad","query":"retinol"}]},
+  {"id":"ceramides","name":"Ceramides","query":"ceramide moisturizer","category":"skincare","market":"MY"},
+  {"id":"skin-barrier","name":"Skin Barrier","query":"skin barrier repair","category":"skincare","market":"MY","aliases":[{"id":"broad","query":"skin barrier"}]},
+  {"id":"acne-care","name":"Acne Care","query":"acne skincare","category":"skincare","market":"MY"},
+  {"id":"vitamin-c","name":"Vitamin C","query":"vitamin C serum","category":"skincare","market":"MY"},
+  {"id":"lip-tint","name":"Lip Tint","query":"lip tint","category":"makeup","market":"MY","aliases":[{"id":"stain","query":"lip stain"}]},
+  {"id":"soft-glam","name":"Soft Glam","query":"soft glam makeup","category":"makeup","market":"MY"},
+  {"id":"blush","name":"Blush","query":"liquid blush","category":"makeup","market":"MY"},
+  {"id":"frizz-control","name":"Frizz Control","query":"frizz control hair","category":"haircare","market":"MY"},
+  {"id":"hair-oil","name":"Hair Oil","query":"hair oil","category":"haircare","market":"MY","aliases":[{"id":"oiling","query":"hair oiling"}]},
+  {"id":"hair-loss","name":"Hair Loss Care","query":"hair loss treatment","category":"haircare","market":"MY"}
+]

@@ -1,0 +1,10 @@
+{
+  "experiment_id": "phase2-2026-08-19-2026-10-13",
+  "topic_ids": ["niacinamide","retinol","skin-barrier","hair-scalp-care","lip-tint","glass-skin","deepavali-glam","hair-oil"],
+  "start_date": "2026-08-19",
+  "end_date": "2026-10-13",
+  "market": "MY",
+  "google": {"category": 0, "property": "", "timezone": "UTC", "term_type": "search_term"},
+  "youtube": {"weeks": 8, "max_pages_per_week": 1, "page_size": 50, "audit_size": 20, "cohort_size": 50},
+  "snapshot_days": 28
+}

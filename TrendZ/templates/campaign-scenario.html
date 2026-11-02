@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Campaign Scenario | TrendZ</title><link rel="stylesheet" href="/static/css/campaign-scenario.css?v=6b-1">
+<link rel="stylesheet" href="/static/css/product-ui.css?v=product-1">
+<script src="https://unpkg.com/feather-icons" defer></script><script src="/static/js/product-ui.js?v=product-1" defer></script>
+<script src="/static/js/campaign-scenario.js?v=6b-1" defer></script></head>
+<body class="product-ui">{% include 'product_nav.html' %}
+<main id="scenario-app" class="product-main"><header class="product-page-heading"><div><p class="product-eyebrow">From signal to scenario</p><h1>Your campaign scenario</h1>
+<p>Calculated under supplied assumptions. Not measured or predicted campaign performance.</p></div></header>
+{% include 'planner_steps.html' %}
+<p id="scenario-status" role="status" aria-live="polite">Loading pinned evidence...</p>
+<div id="scenario-error" role="alert" hidden><p></p><button type="button" id="refresh-context">Refresh evidence context</button></div>
+<section aria-labelledby="evidence-title"><h2 id="evidence-title">Selected campaign context</h2>
+<p class="muted">Observed, reviewed and upstream-calculated context. Not validated market truth or commercial assumptions.</p>
+<div id="scenario-selection" class="context-summary"></div><ul id="scenario-warnings"></ul>
+<details class="context-method"><summary>Review evidence and pinned context</summary><div id="scenario-evidence"></div>
+<details><summary>Evidence, sources and pinned provenance</summary><div id="evidence-links"></div><pre id="evidence-provenance"></pre></details></details></section>
+<form id="scenario-form" hidden>
+<section aria-labelledby="assumptions-title"><p class="product-eyebrow">Step 04</p><h2 id="assumptions-title">Set your assumptions</h2>
+<p class="muted">All entries below are business assumptions. Reach is not filled from creator views. Gross margin includes COGS, not campaign spend.</p>
+<div class="input-grid">
+<label>Campaign objective<select name="objective" required><option value="">Choose objective</option>{% for objective in objectives %}<option value="{{ objective }}">{{ objective|replace('_',' ')|title }}</option>{% endfor %}</select></label>
+<label>Planned format<select name="format" required><option value="">Choose format</option>{% for format in formats %}<option value="{{ format }}">{{ format|replace('_',' ')|title }}</option>{% endfor %}</select></label>
+<label>Channel<select name="channel" required><option value="">Choose channel</option><option value="youtube">YouTube</option></select></label>
+<label>Currency<select name="currency"><option value="MYR">MYR</option></select></label>
+<label>Start date<input type="date" name="start_date" required></label><label>End date (exclusive)<input type="date" name="end_date_exclusive" required></label>
+{% for key,label in [('creator_fee','Creator fee'),('media_spend','Media spend'),('production_cost','Production cost'),('other_cost','Other cost'),('budget_ceiling','Budget ceiling (optional)'),('aov','Net AOV')] %}
+<label>{{ label }} (MYR)<input type="number" name="{{ key }}" min="0" step="any" inputmode="decimal"></label>{% endfor %}
+<label>Gross margin (%)<input type="number" name="gross_margin" min="0" max="100" step="any" inputmode="decimal"></label>
+<label>Conversion denominator<select name="conversion_basis"><option value="">Not supplied</option><option value="assumed_reach">Assumed reach (unique people)</option><option value="target_population">Target population (people)</option></select></label>
+<label>Assumed people<input type="number" name="population" min="0" max="1000000000000" step="1" inputmode="numeric"></label>
+<label>Population assumption source<select name="population_basis"><option value="user_entered">User-entered assumption</option><option value="external_planning">External planning value</option></select></label>
+<label class="wide">Planning source reference (required for external planning)<input name="population_source" maxlength="2000"></label>
+{% for key in ['low','base','high'] %}<label>{{ key|title }} assumed conversion (%)<input type="number" name="{{ key }}_rate" min="0" max="100" step="any" inputmode="decimal"></label>{% endfor %}
+<label class="wide">Assumption notes / exclusions<textarea name="source_notes" maxlength="4000"></textarea></label>
+</div>
+<div id="manual-ack" hidden><p>Manual review only: this candidate has limited evidence. Acceptance does not promote their state.</p>
+<label class="check"><input type="checkbox" name="manual_accepted">I explicitly accept this manual-review-only planning context.</label>
+<label>Reason<textarea name="manual_reason" maxlength="4000"></textarea></label></div>
+<button type="submit">Calculate scenario</button></section></form>
+<section aria-labelledby="outcomes-title"><p class="product-eyebrow">Step 05</p><h2 id="outcomes-title">Review your scenario</h2>
+<p class="muted">Derived outputs under your inputs. Modeled net profit is campaign contribution, not audited company net income.</p>
+<div id="scenario-outcomes"><p>No calculation yet.</p></div>
+</section><section><h2>Sensitivity &amp; Break-even</h2><p class="muted">Only the explicitly supplied conversion rate changes. No probabilities or break-even time are estimated.</p>
+<div id="scenario-sensitivity"></div><div id="scenario-break-even"></div>
+<details id="result-details" hidden><summary>Calculation, assumptions and provenance export</summary><pre id="scenario-json"></pre><button type="button" id="download-scenario">Download JSON</button></details></section>
+{% include 'product_footer.html' %}
+</main></body></html>

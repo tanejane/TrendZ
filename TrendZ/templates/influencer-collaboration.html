@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaysian Influencer Collaboration - TrendZ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="/static/css/color-palette.css" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif;
+            background: var(--gradient-primary);
+        }
+        .influencer-card { 
+            transition: all 0.3s ease; 
+            border: 2px solid transparent;
+        }
+        .influencer-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: var(--accent-royal-blue);
+        }
+        .profile-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--accent-royal-blue);
+        }
+        .engagement-bar {
+            height: 8px;
+            background: linear-gradient(90deg, var(--accent-emerald-green), var(--accent-golden-amber));
+            border-radius: 4px;
+        }
+        .price-tag {
+            background: var(--solid-success);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .availability-badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .available { background: var(--solid-success); color: white; }
+        .busy { background: var(--solid-warning); color: white; }
+        .unavailable { background: var(--accent-coral-red); color: white; }
+        .filter-section {
+            background: var(--solid-neutral);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-md);
+        }
+        .stats-card {
+            background: var(--solid-neutral);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+        .platform-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+    </style>
+    <link href="/static/css/premium-theme.css?v=simple-2" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    {% include 'data_notice.html' %}
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-xl font-bold text-gray-900">TrendZ</h1>
+                        <p class="text-xs text-gray-500">Malaysian Influencer Collaboration</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="btn-secondary flex items-center">
+                        <i data-feather="arrow-left" class="w-4 h-4 mr-2"></i> Back to Dashboard
+                    </a>
+                    <button onclick="refreshInfluencers()" class="btn-primary flex items-center">
+                        <i data-feather="refresh-cw" class="w-4 h-4 mr-2"></i> Refresh Data
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">
+                Malaysian Beauty Influencer Network
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Connect with top Malaysian beauty influencers for authentic collaborations and campaigns
+            </p>
+        </div>
+
+        <!-- Statistics -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div class="stats-card">
+                <div class="text-3xl font-bold text-blue-600" id="total-influencers">20</div>
+                <div class="text-sm text-gray-600">Total Influencers</div>
+            </div>
+            <div class="stats-card">
+                <div class="text-3xl font-bold text-green-600" id="total-reach">12.5M</div>
+                <div class="text-sm text-gray-600">Combined Reach</div>
+            </div>
+            <div class="stats-card">
+                <div class="text-3xl font-bold text-purple-600" id="avg-engagement">5.2%</div>
+                <div class="text-sm text-gray-600">Avg Engagement</div>
+            </div>
+            <div class="stats-card">
+                <div class="text-3xl font-bold text-orange-600" id="available-count">18</div>
+                <div class="text-sm text-gray-600">Available Now</div>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filter-section">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">Filter Influencers</h3>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Platform</label>
+                    <select id="platform-filter" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent" onchange="applyFilters()">
+                        <option value="">All Platforms</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="TikTok">TikTok</option>
+                        <option value="YouTube">YouTube</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Category</label>
+                    <select id="category-filter" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent" onchange="applyFilters()">
+                        <option value="">All Categories</option>
+                        <option value="Beauty">Beauty</option>
+                        <option value="Lifestyle">Lifestyle</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Price Range</label>
+                    <select id="price-filter" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent" onchange="applyFilters()">
+                        <option value="">All Prices</option>
+                        <option value="budget">Under RM 5,000</option>
+                        <option value="mid">RM 5,000 - 15,000</option>
+                        <option value="premium">Above RM 15,000</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Availability</label>
+                    <select id="availability-filter" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent" onchange="applyFilters()">
+                        <option value="">All Status</option>
+                        <option value="Available">Available</option>
+                        <option value="Busy">Busy</option>
+                        <option value="Unavailable">Unavailable</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Influencer Grid -->
+        <div id="influencer-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Influencers will be loaded here -->
+        </div>
+
+        <!-- Loading State -->
+        <div id="loading-state" class="text-center py-12">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+            <p class="text-gray-600 mt-4">Loading Malaysian influencers...</p>
+        </div>
+    </div>
+
+    <!-- Influencer Detail Modal -->
+    <div id="influencer-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900" id="modal-name">Influencer Name</h3>
+                        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600">
+                            <i data-feather="x" class="w-6 h-6"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <img id="modal-image" src="" alt="Profile" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                            <div class="text-center">
+                                <p id="modal-bio" class="text-gray-600 mb-4"></p>
+                                <div class="flex justify-center space-x-4">
+                                    <a id="modal-instagram" href="#" target="_blank" class="text-pink-600 hover:text-pink-800">
+                                        <i data-feather="instagram" class="w-5 h-5"></i>
+                                    </a>
+                                    <a id="modal-tiktok" href="#" target="_blank" class="text-black hover:text-gray-800">
+                                        <i data-feather="video" class="w-5 h-5"></i>
+                                    </a>
+                                    <a id="modal-youtube" href="#" target="_blank" class="text-red-600 hover:text-red-800">
+                                        <i data-feather="youtube" class="w-5 h-5"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Platform & Reach</h4>
+                                    <p id="modal-platform" class="text-gray-600"></p>
+                                    <p id="modal-followers" class="text-gray-600"></p>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Engagement Rate</h4>
+                                    <div class="engagement-bar w-full mb-2">
+                                        <div id="modal-engagement-bar" class="engagement-bar" style="width: 0%"></div>
+                                    </div>
+                                    <p id="modal-engagement-text" class="text-sm text-gray-600"></p>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Specialization</h4>
+                                    <p id="modal-specialization" class="text-gray-600"></p>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Location & Language</h4>
+                                    <p id="modal-location" class="text-gray-600"></p>
+                                    <p id="modal-language" class="text-gray-600"></p>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Collaboration Rate</h4>
+                                    <p id="modal-price" class="text-lg font-bold text-green-600"></p>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Contact</h4>
+                                    <a id="modal-email" href="#" class="text-blue-600 hover:text-blue-800"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 flex justify-center space-x-4">
+                        <button onclick="contactInfluencer()" class="btn-primary">
+                            <i data-feather="mail" class="w-4 h-4 mr-2"></i> Contact for Collaboration
+                        </button>
+                        <button onclick="addToWatchlist()" class="btn-outline">
+                            <i data-feather="eye" class="w-4 h-4 mr-2"></i> Add to Watchlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Feather icons
+        feather.replace();
+
+        let influencers = [];
+        let filteredInfluencers = [];
+
+        // Load influencers on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadInfluencers();
+        });
+
+        // Load influencers data
+        async function loadInfluencers() {
+            try {
+                const response = await fetch('/api/malaysia/influencers');
+                const data = await response.json();
+                
+                if (data.status === 'success' && data.influencers) {
+                    influencers = data.influencers;
+                    filteredInfluencers = [...influencers];
+                    displayInfluencers();
+                    updateStatistics();
+                    document.getElementById('loading-state').style.display = 'none';
+                } else {
+                    document.getElementById('loading-state').innerHTML = 
+                        '<div class="text-red-500">Error loading influencers data</div>';
+                }
+            } catch (error) {
+                document.getElementById('loading-state').innerHTML = 
+                    '<div class="text-red-500">Error loading influencers data</div>';
+            }
+        }
+
+        // Display influencers
+        function displayInfluencers() {
+            const grid = document.getElementById('influencer-grid');
+            grid.innerHTML = '';
+
+            filteredInfluencers.forEach(influencer => {
+                const card = createInfluencerCard(influencer);
+                grid.appendChild(card);
+            });
+        }
+
+        // Create influencer card
+        function createInfluencerCard(influencer) {
+            const card = document.createElement('div');
+            card.className = 'influencer-card bg-white rounded-xl shadow-sm border border-gray-100 p-6 cursor-pointer';
+            card.onclick = () => openModal(influencer);
+
+            const engagementWidth = Math.min((influencer.engagement_rate / 8) * 100, 100);
+            const availabilityClass = influencer.availability.toLowerCase().replace(' ', '');
+
+            card.innerHTML = `
+                <div class="flex items-start space-x-4">
+                    <img src="${influencer.profile_image}" alt="${influencer.name}" class="profile-image">
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-lg font-bold text-gray-900">${influencer.name}</h3>
+                            <span class="availability-badge ${availabilityClass}">${influencer.availability}</span>
+                        </div>
+                        
+                        <div class="flex items-center mb-2">
+                            <i data-feather="${getPlatformIcon(influencer.platform)}" class="platform-icon"></i>
+                            <span class="text-sm text-gray-600">${influencer.platform}</span>
+                            <span class="text-sm text-gray-500 ml-2">@${influencer.username}</span>
+                        </div>
+                        
+                        <p class="text-sm text-gray-600 mb-3">${influencer.specialization}</p>
+                        
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Followers:</span>
+                                <span class="text-sm font-semibold">${formatNumber(influencer.followers)}</span>
+                            </div>
+                            
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-600">Engagement:</span>
+                                <span class="text-sm font-semibold">${influencer.engagement_rate}%</span>
+                            </div>
+                            
+                            <div class="engagement-bar w-full">
+                                <div class="engagement-bar" style="width: ${engagementWidth}%"></div>
+                            </div>
+                            
+                            <div class="flex justify-between items-center mt-3">
+                                <span class="text-sm text-gray-600">Rate:</span>
+                                <span class="price-tag">${influencer.price_range}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i data-feather="star" class="w-4 h-4 text-yellow-500 mr-1"></i>
+                                <span class="text-sm font-semibold">${influencer.rating}</span>
+                            </div>
+                            <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Re-initialize Feather icons for the new card
+            feather.replace();
+            return card;
+        }
+
+        // Get platform icon
+        function getPlatformIcon(platform) {
+            switch(platform.toLowerCase()) {
+                case 'instagram': return 'instagram';
+                case 'tiktok': return 'video';
+                case 'youtube': return 'youtube';
+                default: return 'user';
+            }
+        }
+
+        // Format number
+        function formatNumber(num) {
+            if (num >= 1000000) {
+                return (num / 1000000).toFixed(1) + 'M';
+            } else if (num >= 1000) {
+                return (num / 1000).toFixed(1) + 'K';
+            }
+            return num.toString();
+        }
+
+        // Update statistics
+        function updateStatistics() {
+            const totalReach = influencers.reduce((sum, inf) => sum + inf.followers, 0);
+            const avgEngagement = influencers.reduce((sum, inf) => sum + inf.engagement_rate, 0) / influencers.length;
+            const availableCount = influencers.filter(inf => inf.availability === 'Available').length;
+
+            document.getElementById('total-influencers').textContent = influencers.length;
+            document.getElementById('total-reach').textContent = formatNumber(totalReach);
+            document.getElementById('avg-engagement').textContent = avgEngagement.toFixed(1) + '%';
+            document.getElementById('available-count').textContent = availableCount;
+        }
+
+        // Apply filters
+        function applyFilters() {
+            const platform = document.getElementById('platform-filter').value;
+            const category = document.getElementById('category-filter').value;
+            const price = document.getElementById('price-filter').value;
+            const availability = document.getElementById('availability-filter').value;
+
+            filteredInfluencers = influencers.filter(influencer => {
+                const platformMatch = !platform || influencer.platform === platform;
+                const categoryMatch = !category || influencer.category === category;
+                const availabilityMatch = !availability || influencer.availability === availability;
+                
+                let priceMatch = true;
+                if (price) {
+                    const priceRange = influencer.price_range.toLowerCase();
+                    if (price === 'budget' && !priceRange.includes('5000')) priceMatch = false;
+                    if (price === 'mid' && (!priceRange.includes('5000') || priceRange.includes('15000'))) priceMatch = false;
+                    if (price === 'premium' && !priceRange.includes('15000')) priceMatch = false;
+                }
+
+                return platformMatch && categoryMatch && availabilityMatch && priceMatch;
+            });
+
+            displayInfluencers();
+        }
+
+        // Open modal
+        function openModal(influencer) {
+            document.getElementById('modal-name').textContent = influencer.name;
+            document.getElementById('modal-image').src = influencer.profile_image;
+            document.getElementById('modal-bio').textContent = influencer.bio;
+            document.getElementById('modal-platform').textContent = influencer.platform;
+            document.getElementById('modal-followers').textContent = `${formatNumber(influencer.followers)} followers`;
+            document.getElementById('modal-specialization').textContent = influencer.specialization;
+            document.getElementById('modal-location').textContent = influencer.location;
+            document.getElementById('modal-language').textContent = influencer.language;
+            document.getElementById('modal-price').textContent = influencer.price_range;
+            document.getElementById('modal-email').href = `mailto:${influencer.contact_email}`;
+            document.getElementById('modal-email').textContent = influencer.contact_email;
+            
+            // Set social media links
+            document.getElementById('modal-instagram').href = influencer.instagram_url;
+            document.getElementById('modal-tiktok').href = influencer.tiktok_url;
+            document.getElementById('modal-youtube').href = influencer.youtube_url;
+            
+            // Update engagement bar
+            const engagementWidth = Math.min((influencer.engagement_rate / 8) * 100, 100);
+            document.getElementById('modal-engagement-bar').style.width = engagementWidth + '%';
+            document.getElementById('modal-engagement-text').textContent = `${influencer.engagement_rate}% engagement rate`;
+
+            document.getElementById('influencer-modal').classList.remove('hidden');
+            feather.replace();
+        }
+
+        // Close modal
+        function closeModal() {
+            document.getElementById('influencer-modal').classList.add('hidden');
+        }
+
+        // Contact influencer
+        function contactInfluencer() {
+            const email = document.getElementById('modal-email').textContent;
+            window.location.href = `mailto:${email}?subject=Collaboration Opportunity - TrendZ`;
+        }
+
+        // Add to watchlist
+        function addToWatchlist() {
+            alert('Added to watchlist! You will receive notifications about this influencer.');
+        }
+
+        // Refresh influencers
+        function refreshInfluencers() {
+            document.getElementById('loading-state').style.display = 'block';
+            document.getElementById('influencer-grid').innerHTML = '';
+            setTimeout(loadInfluencers, 1000);
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+

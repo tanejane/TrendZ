@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="review-token" content="{{ review_token }}">
+  <title>TrendZ | Creator Evidence Review</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/creator-review.css') }}">
+  <script defer src="{{ url_for('static',filename='js/creator-review.js') }}"></script>
+</head>
+<body>
+<header><div><strong>TrendZ</strong><span>Creator Evidence Review</span></div><span class="muted">Phase 5C &middot; Local workspace</span></header>
+<main>
+  <div class="toolbar"><div role="tablist" aria-label="Review unit">
+    <button role="tab" id="profile-tab" aria-selected="true" data-kind="profile">Creator Profiles <span id="profile-progress"></span></button>
+    <button role="tab" id="affinity-tab" aria-selected="false" data-kind="affinity">Topic Affinity <span id="affinity-progress"></span></button>
+  </div><div class="commands"><a id="export" href="/api/review/export/profile">Export Reviews</a><button id="evaluate" disabled>Generate Evaluation</button></div></div>
+  <p id="session-state" class="muted">Loading fixed review session...</p>
+  <div id="message" role="status" aria-live="polite"></div>
+  <div class="layout">
+    <aside aria-label="Review queue">
+      <label for="group">Evidence Group</label><select id="group"><option value="">Both Groups</option><option value="review_ready">24 Review-ready</option><option value="insufficient">16 Insufficient</option></select>
+      <label for="status">Review Status</label><select id="status"><option value="">All Rows</option><option value="pending">Pending</option><option value="reviewed">Reviewed</option></select>
+      <label for="topic">Topic</label><select id="topic"><option value="">All Topics</option></select>
+      <label for="search">Creator</label><input id="search" type="search" placeholder="Name or channel ID">
+      <p id="queue-count" class="muted"></p><nav id="queue" aria-label="Fixed review units"></nav>
+    </aside>
+    <section id="workspace" aria-busy="false">
+      <div id="empty">Select a review unit.</div>
+      <div id="content" hidden>
+        <div class="heading"><div><p id="unit-kind" class="muted"></p><h1 id="creator-name"></h1><a id="channel-link" target="_blank" rel="noopener noreferrer"></a></div>
+        <div class="commands"><button id="previous" title="Previous review" aria-label="Previous review">&larr;</button><button id="next" title="Next review" aria-label="Next review">&rarr;</button></div></div>
+        <p id="group-state" class="state"></p>
+        <section class="band" aria-label="Provisional evidence"><h2>Evidence Snapshot</h2><dl id="facts"></dl><ul id="warnings" class="muted"></ul>
+          <details><summary>Engagement Descriptors</summary><pre id="engagement"></pre></details>
+          <details><summary>Market and Audience Evidence</summary><pre id="market"></pre></details>
+          <details><summary>Source Provenance</summary><pre id="provenance"></pre></details>
+        </section>
+        <div class="review-columns">
+          <section class="videos-section"><div class="section-heading"><h2>Content Evidence</h2><span id="selection-count" class="muted"></span></div><div id="videos"></div></section>
+          <section class="decision-section"><h2>Human Review</h2>
+            <form id="review-form">
+              <label for="human-label">Review Label</label><select id="human-label" required></select>
+              <div id="classification-fields"><fieldset><legend>Domain</legend><div id="domains" class="checkboxes"></div></fieldset><fieldset><legend>Beauty Specializations</legend><div id="specializations" class="checkboxes"></div></fieldset><button type="button" id="use-profile">Copy Proposed Profile to Draft</button></div>
+              <button type="button" id="use-topic">Select Screened Matches in Draft</button>
+              <label for="sufficiency">Evidence Sufficiency</label><select id="sufficiency" required><option value="">Not Reviewed</option><option value="sufficient">Sufficient</option><option value="partial">Partial</option><option value="insufficient">Insufficient</option></select>
+              <label for="explanation">Explanation Support</label><select id="explanation" required><option value="">Not Reviewed</option><option value="supported">Supported</option><option value="unsupported">Unsupported</option><option value="insufficient_evidence">Insufficient Evidence</option></select>
+              <label for="basis">Review Basis</label><select id="basis" required><option value="">Not Recorded</option><option value="human_evidence_review">Human Evidence Review</option><option value="assisted_review">Assisted Review</option></select>
+              <label for="notes">Evidence Notes</label><textarea id="notes" rows="5" maxlength="6000" required></textarea>
+              <label for="reviewer">Reviewer</label><input id="reviewer" type="text" maxlength="120" required autocomplete="name">
+              <div class="commands actions"><button type="submit" class="primary" id="save">Save Review</button><button type="submit" id="save-next">Save and Next</button><button type="button" id="reset">Return to Pending</button></div>
+              <p id="revision" class="muted"></p>
+            </form>
+            <details id="history"><summary>Revision History</summary><div id="history-content"></div></details>
+          </section>
+        </div>
+      </div>
+    </section>
+  </div>
+  <section id="evaluation-output" hidden><h2>Completed Review Evaluation</h2><pre id="evaluation-json"></pre></section>
+</main>
+</body></html>

@@ -1,0 +1,3 @@
+topic_id,source,source_identifier,source_url,market,observation_date,retrieved_at,metric,value,series_id,is_demo,metadata
+glass-skin,fixture,example-series,,MY,2026-01-01,2026-01-22T00:00:00Z,interest_score,10,example-only,true,{}
+glass-skin,fixture,example-series,,MY,2026-01-02,2026-01-22T00:00:00Z,interest_score,10,example-only,true,{}

@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ trend.name }} - Trend Analysis | TrendZ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .chart-container { position: relative; height: 300px; }
+    </style>
+    <link href="/static/css/premium-theme.css?v=simple-2" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/intelligence.css') }}?v=phase3b-1" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/intelligence.js') }}?v=phase3b-1" defer></script>
+    <link href="{{ url_for('static', filename='css/creator-candidates.css') }}?v=phase5e-1" rel="stylesheet">
+    {% if trend.data_mode != 'demo' %}
+    <link rel="stylesheet" href="/static/css/product-ui.css?v=product-1">
+    <script src="/static/js/product-ui.js?v=product-1" defer></script>
+    {% endif %}
+    <script src="{{ url_for('static', filename='js/creator-candidates.js') }}?v=product-1" defer></script>
+</head>
+<body class="{{ 'product-ui' if trend.data_mode != 'demo' else 'bg-gray-50' }}">
+    {% if trend.data_mode == 'demo' %}
+    {% include 'data_notice.html' %}
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex-shrink-0">
+                        <h1 class="text-xl font-bold text-gray-900">TrendZ</h1>
+                        <p class="text-xs text-gray-500">Beauty Trend Intelligence</p>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 flex items-center">
+                        <i data-feather="arrow-left" class="w-4 h-4 mr-2"></i> Back to Dashboard
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    {% else %}
+    {% include 'product_nav.html' %}
+    {% endif %}
+
+    {% if trend.data_mode != 'demo' %}
+    {% include 'measured_detail.html' %}
+    {% else %}
+    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-900">{{ trend.name }}</h1>
+                    <p class="text-lg text-gray-600 mt-1">#{{ trend.hashtag }}</p>
+                    <div class="flex items-center space-x-4 mt-4">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                            {{ trend.platform }}
+                        </span>
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium 
+                            {% if trend.lifecycle == 'Emerging' %}bg-green-100 text-green-800
+                            {% elif trend.lifecycle == 'Growing' %}bg-blue-100 text-blue-800
+                            {% elif trend.lifecycle == 'Mature' %}bg-yellow-100 text-yellow-800
+                            {% else %}bg-red-100 text-red-800{% endif %}">
+                            {{ trend.lifecycle }}
+                        </span>
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-800">
+                            {{ trend.category }}
+                        </span>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <div class="text-3xl font-bold text-gray-900">{{ trend.trend_score }}/100</div>
+                    <p class="text-sm text-gray-500">Trend Score</p>
+                </div>
+            </div>
+        </div>
+
+        {% include 'intelligence_dimensions.html' %}
+        {% include 'creator_candidates.html' %}
+
+        <!-- Key Metrics -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <div class="flex items-center">
+                    <div class="p-3 rounded-full bg-green-100">
+                        <i data-feather="dollar-sign" class="w-6 h-6 text-green-600"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-sm font-medium text-gray-500">Campaign economics</h3>
+                        <a href="/roi-insights">Build scenario</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <div class="flex items-center">
+                    <div class="p-3 rounded-full bg-blue-100">
+                        <i data-feather="trending-up" class="w-6 h-6 text-blue-600"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-sm font-medium text-gray-500">Growth Rate</h3>
+                        <p class="text-2xl font-bold text-gray-900">{{ trend.growth }}%</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <div class="flex items-center">
+                    <div class="p-3 rounded-full bg-purple-100">
+                        <i data-feather="users" class="w-6 h-6 text-purple-600"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-sm font-medium text-gray-500">Total Reach</h3>
+                        <p class="text-2xl font-bold text-gray-900">{{ (trend.reach / 1000000) | round(1) }}M</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <div class="flex items-center">
+                    <div class="p-3 rounded-full bg-orange-100">
+                        <i data-feather="clock" class="w-6 h-6 text-orange-600"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-sm font-medium text-gray-500">Days to Peak</h3>
+                        <p class="text-2xl font-bold text-gray-900">{{ trend.days_to_peak }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Recommendation -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900">Recommendation</h3>
+                    <p class="text-lg {% if 'Invest' in trend.action %}text-green-600{% elif 'Safe' in trend.action %}text-blue-600{% elif 'Monitor' in trend.action %}text-yellow-600{% else %}text-red-600{% endif %} font-semibold mt-2">
+                        {{ trend.action }}
+                    </p>
+                </div>
+                <div class="text-right">
+                    <div class="text-lg font-semibold text-gray-900">FOMO Score</div>
+                    <div class="text-2xl font-bold text-orange-600">{{ trend.fomo_score }}/100</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Commercial outcomes require explicit scenario assumptions. -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-6">Assumption-based Campaign Economics</h3>
+            <p>Select a positive product and creator candidate above. Commercial outcomes require explicit costs, reach and conversion assumptions.</p>
+            <a href="/roi-insights">Open Campaign Scenarios</a>
+        </div>
+
+        <!-- Early Detection Insights -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-6">Early Detection Insights</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-3">Trend Metrics</h4>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Early Trend Score:</span>
+                            <span class="font-semibold">{{ trend.early_trend_score }}/100</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Anomaly Detected:</span>
+                            <span class="font-semibold {% if trend.anomaly_detected %}text-yellow-600{% else %}text-gray-600{% endif %}">
+                                {% if trend.anomaly_detected %}Yes{% else %}No{% endif %}
+                            </span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Trend Probability:</span>
+                            <span class="font-semibold">{{ (trend.trend_probability * 100) | round(1) }}%</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-3">Timing Insights</h4>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Time to Peak:</span>
+                            <span class="font-semibold">{{ trend.time_to_peak }}</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Competitive Window:</span>
+                            <span class="font-semibold">{{ trend.competitive_window }}</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Action Urgency:</span>
+                            <span class="font-semibold text-orange-600">{{ trend.action_urgency }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Replaces the retired demo revenue and profit breakdown. -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-6">Business Assumptions</h3>
+            <p>Revenue, campaign contribution and ROI are calculated only inside a pinned Campaign Scenario. No commercial return is inferred from trend or creator evidence.</p>
+        </div>
+
+        <!-- Focus Group Analysis -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-6">Focus Group Analysis</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-3">Demographics</h4>
+                    <div class="space-y-2">
+                        {% for key, value in trend.demographics.items() %}
+                        <div class="flex justify-between">
+                            <span class="text-gray-600 capitalize">{{ key.replace('_', ' ') }}:</span>
+                            <span class="font-semibold">{{ value }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-3">Marketing Recommendations</h4>
+                    <ul class="space-y-2">
+                        {% for recommendation in trend.marketing_recommendations %}
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-600 mt-0.5 mr-2 flex-shrink-0"></i>
+                            <span class="text-gray-700">{{ recommendation }}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Creation Strategy -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-6">Content Creation Strategy</h3>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-3">Content Ideas</h4>
+                    <div class="space-y-3 max-h-60 overflow-y-auto">
+                        {% for idea in trend.content_ideas[:5] %}
+                        <div class="bg-pink-50 p-3 rounded-lg">
+                            <h5 class="font-semibold text-pink-900">{{ idea.title }}</h5>
+                            <p class="text-sm text-pink-700">{{ idea.description }}</p>
+                            <div class="flex justify-between text-xs text-pink-600 mt-2">
+                                <span>{{ idea.format }}</span>
+                                <span>{{ idea.estimated_time }}</span>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-3">Hashtag Strategy</h4>
+                    <div class="space-y-3">
+                        <div>
+                            <h5 class="text-sm font-semibold text-gray-700">Primary Hashtags</h5>
+                            <div class="flex flex-wrap gap-1 mt-1">
+                                {% for hashtag in trend.hashtag_strategy.primary_hashtags[:8] %}
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">{{ hashtag }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div>
+                            <h5 class="text-sm font-semibold text-gray-700">Brand Hashtags</h5>
+                            <div class="flex flex-wrap gap-1 mt-1">
+                                {% for hashtag in trend.hashtag_strategy.brand_hashtags %}
+                                <span class="px-2 py-1 bg-red-100 text-red-800 text-xs rounded">{{ hashtag }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-3">Production Timeline</h4>
+                    <div class="space-y-2">
+                        {% for phase, duration in trend.production_timeline.items() %}
+                        {% if phase != 'urgency_level' and phase != 'team_requirements' and phase != 'resource_allocation' %}
+                        <div class="flex justify-between">
+                            <span class="text-gray-600 capitalize">{{ phase.replace('_', ' ') }}:</span>
+                            <span class="font-semibold">{{ duration }}</span>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-3">Success Metrics</h4>
+                    <div class="space-y-2">
+                        {% for metric, target in trend.success_metrics.targets.items() %}
+                        <div class="flex justify-between">
+                            <span class="text-gray-600 capitalize">{{ metric.replace('_', ' ') }}:</span>
+                            <span class="font-semibold">{{ target }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Malaysia Insights -->
+        <div class="bg-gradient-to-r from-green-50 to-yellow-50 rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                Malaysia-Specific Insights
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-3">Local Relevance</h4>
+                    <div class="space-y-3">
+                        <div class="bg-white p-3 rounded-lg">
+                            <p class="text-sm text-gray-700">This trend shows strong potential in Malaysia's tropical climate with proper adaptation strategies.</p>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg">
+                            <p class="text-sm text-gray-700">Cultural fit assessment: Suitable for all Malaysian communities with modest adaptations.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-3">Recommended Actions</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-600 mt-0.5 mr-2 flex-shrink-0"></i>
+                            <span class="text-gray-700">Partner with Malaysian beauty influencers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-600 mt-0.5 mr-2 flex-shrink-0"></i>
+                            <span class="text-gray-700">Adapt products for humidity resistance</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-600 mt-0.5 mr-2 flex-shrink-0"></i>
+                            <span class="text-gray-700">Create multilingual content (Bahasa, Chinese, Tamil)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="w-4 h-4 text-green-600 mt-0.5 mr-2 flex-shrink-0"></i>
+                            <span class="text-gray-700">Launch during key cultural celebrations</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Structured tools remain available without a model. -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                <i data-feather="help-circle" class="w-6 h-6 text-purple-600 mr-3"></i>
+                Structured Evidence
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <a href="/hashtag-products" class="p-4 text-left border border-gray-200 rounded-lg">Product Fit evidence</a>
+                
+                <a href="#intelligence-heading" class="p-4 text-left border border-gray-200 rounded-lg">Measured intelligence</a>
+                
+                <a href="/roi-insights" class="p-4 text-left border border-gray-200 rounded-lg">Campaign Scenarios</a>
+                
+                <a href="#creator-heading" class="p-4 text-left border border-gray-200 rounded-lg">Creator Candidates</a>
+            </div>
+            
+            <p>Provider not configured. Live assistant execution is intentionally deferred. No AI/model is connected.</p>
+        </div>
+    </div>
+
+    {% endif %}
+    <script>
+        // Initialize Feather icons
+        if (window.feather) feather.replace();
+
+    </script>
+</body>
+</html>
+
+
+
+
+

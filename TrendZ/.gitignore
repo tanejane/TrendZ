@@ -1,0 +1,40 @@
+# Local secrets and environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*.json
+*secrets*.json
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage*
+htmlcov/
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Captured source evidence and private working data
+reports/
+*.sqlite3
+*.sqlite
+*.db
+data/watchlist.json
+data/creators/review_sessions/
+data/products/review_sessions/
+data/creator_evidence_v1.json
+data/products/evidence_hardening_v1.json
+raw_data/
+processed_data/
+generated_data/
+output/
+results/
+*.log
+
+# Archives and local scratch
+*.zip
+*.tar.gz
+.tmp/

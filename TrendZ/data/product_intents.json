@@ -1,0 +1,13 @@
+{
+  "version": "intent-1",
+  "topics": {
+    "niacinamide": {"kind":"ingredient", "categories":["skincare"], "subcategories":["serum"], "ingredients":["niacinamide"], "formats":["serum"], "areas":["face"], "alias_overrides":{"broad":{"formats":[],"subcategories":[]}}},
+    "retinol": {"kind":"ingredient", "categories":["skincare"], "ingredients":["retinol"], "formats":[], "areas":["face"]},
+    "skin-barrier": {"kind":"benefit", "categories":["skincare"], "benefits":["barrier_repair"], "supporting_benefits":["hydration","soothing"], "ingredients":["panthenol","ceramide np","ceramide ap","ceramide eop"], "formats":[], "areas":["face"]},
+    "hair-scalp-care": {"kind":"benefit", "categories":["haircare"], "benefits":["scalp_cleansing","scalp_care"], "formats":[], "areas":["scalp"]},
+    "lip-tint": {"kind":"format", "categories":["makeup"], "formats":["lip_tint"], "areas":["lips"], "alias_overrides":{"stain":{"formats":["lip_stain"]}}},
+    "glass-skin": {"kind":"look", "categories":["skincare","makeup"], "benefits":["radiance","hydration"], "finishes":["radiant","dewy"], "formats":[], "areas":["face"]},
+    "deepavali-glam": {"kind":"occasion", "categories":["makeup"], "benefits":["long_wear","intense_colour"], "formats":["liquid_lipstick","bullet_lipstick","foundation"], "areas":["face","lips"], "occasion":"deepavali"},
+    "hair-oil": {"kind":"format", "categories":["haircare"], "formats":["hair_oil"], "areas":["hair_lengths"]}
+  }
+}

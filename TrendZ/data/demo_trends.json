@@ -1,0 +1,387 @@
+[
+  {
+    "id": "glass-skin",
+    "name": "Glass Skin",
+    "hashtag": "glassskin",
+    "platform": "TikTok",
+    "audience": "Gen Z",
+    "category": "skincare",
+    "lifecycle": "Growing",
+    "trend_score": 88,
+    "roi_score": 184,
+    "growth": 18.4,
+    "engagement_rate": 7.2,
+    "days_to_peak": 16,
+    "fomo_score": 82,
+    "reach": 2800000,
+    "action": "Invest Now",
+    "predicted_roi": 184,
+    "roi_confidence": 0.91,
+    "success_probability": 0.86,
+    "break_even_time": 28,
+    "max_investment": 180000,
+    "risk_level": 0.24,
+    "early_trend_score": 79,
+    "anomaly_detected": true,
+    "trend_probability": 0.86,
+    "time_to_peak": "2-3 weeks",
+    "competitive_window": "High for the next 30 days",
+    "action_urgency": "Launch creator tests this week",
+    "revenue_potential": 520000,
+    "net_profit": 340000,
+    "roi_percentage": 184,
+    "revenue_streams": {
+      "Product bundles": 220000,
+      "Creator campaigns": 160000,
+      "Marketplace lift": 140000
+    },
+    "demographics": {
+      "Primary age": "18-24",
+      "Top community": "Urban Gen Z",
+      "Key concern": "Hydration and glow"
+    },
+    "marketing_recommendations": [
+      "Bundle hydrating serum with sunscreen for humid weather routines.",
+      "Use short routine videos with before-and-after skin texture shots.",
+      "Partner with skincare creators in Kuala Lumpur and Penang."
+    ],
+    "content_ideas": [
+      {
+        "title": "Three-step glass skin routine",
+        "description": "Quick morning routine using serum, moisturizer, and SPF."
+      },
+      {
+        "title": "Humidity test",
+        "description": "Wear-test glow products during a full Malaysian workday."
+      },
+      {
+        "title": "Creator skin diary",
+        "description": "Seven-day creator-led progress series."
+      }
+    ],
+    "hashtag_strategy": {
+      "primary_hashtags": [
+        "#glassskin",
+        "#malaysiaskincare",
+        "#glowroutine",
+        "#hydratedskin"
+      ],
+      "brand_hashtags": [
+        "#LorealMalaysia",
+        "#TrendZBeauty"
+      ]
+    },
+    "production_timeline": {
+      "Creator shortlist": "2 days",
+      "Content production": "1 week",
+      "Paid test": "10 days",
+      "Scale decision": "3 days"
+    },
+    "success_metrics": {
+      "targets": {
+        "Engagement rate": "6%+",
+        "Cost per view": "Below RM 0.05",
+        "Add-to-cart lift": "12%+"
+      }
+    }
+  },
+  {
+    "id": "sunscreen-reapply",
+    "name": "Sunscreen Reapply",
+    "hashtag": "sunscreenreapply",
+    "platform": "Instagram",
+    "audience": "Millennials",
+    "category": "skincare",
+    "lifecycle": "Emerging",
+    "trend_score": 76,
+    "roi_score": 142,
+    "growth": 21.1,
+    "engagement_rate": 5.9,
+    "days_to_peak": 24,
+    "fomo_score": 68,
+    "reach": 1650000,
+    "action": "Safe to Join",
+    "predicted_roi": 142,
+    "roi_confidence": 0.84,
+    "success_probability": 0.78,
+    "break_even_time": 35,
+    "max_investment": 120000,
+    "risk_level": 0.31,
+    "early_trend_score": 84,
+    "anomaly_detected": false,
+    "trend_probability": 0.78,
+    "time_to_peak": "3-4 weeks",
+    "competitive_window": "Medium",
+    "action_urgency": "Prepare educational content",
+    "revenue_potential": 310000,
+    "net_profit": 190000,
+    "roi_percentage": 142,
+    "revenue_streams": {
+      "SPF sales": 180000,
+      "Retail activations": 90000,
+      "Sampling": 40000
+    },
+    "demographics": {
+      "Primary age": "25-34",
+      "Top community": "Working professionals",
+      "Key concern": "Sun protection"
+    },
+    "marketing_recommendations": [
+      "Show reapplication over makeup with lightweight SPF.",
+      "Create office-to-outdoor routine content.",
+      "Use dermatology-backed captions and FAQ posts."
+    ],
+    "content_ideas": [
+      {
+        "title": "SPF over makeup",
+        "description": "Demonstrate mist and powder SPF reapplication."
+      },
+      {
+        "title": "Lunch break reapply",
+        "description": "Fast routine for office workers."
+      }
+    ],
+    "hashtag_strategy": {
+      "primary_hashtags": [
+        "#sunscreenreapply",
+        "#malaysiansun",
+        "#spfmalaysia"
+      ],
+      "brand_hashtags": [
+        "#LorealMalaysia",
+        "#UVDefender"
+      ]
+    },
+    "production_timeline": {
+      "Concept": "2 days",
+      "Shoot": "3 days",
+      "Launch": "1 week"
+    },
+    "success_metrics": {
+      "targets": {
+        "Save rate": "8%+",
+        "Click-through": "2.5%+",
+        "SPF bundle lift": "10%+"
+      }
+    }
+  },
+  {
+    "id": "deepavali-glam",
+    "name": "Deepavali Glam",
+    "hashtag": "deepavaliglam",
+    "platform": "Instagram",
+    "audience": "Gen Z",
+    "category": "makeup",
+    "lifecycle": "Emerging",
+    "trend_score": 72,
+    "roi_score": 156,
+    "growth": 14.6,
+    "engagement_rate": 6.4,
+    "days_to_peak": 30,
+    "fomo_score": 74,
+    "reach": 1220000,
+    "action": "Monitor Closely",
+    "predicted_roi": 156,
+    "roi_confidence": 0.79,
+    "success_probability": 0.73,
+    "break_even_time": 42,
+    "max_investment": 95000,
+    "risk_level": 0.36,
+    "early_trend_score": 71,
+    "anomaly_detected": false,
+    "trend_probability": 0.73,
+    "time_to_peak": "Festival window",
+    "competitive_window": "Seasonal",
+    "action_urgency": "Plan before holiday content rush",
+    "revenue_potential": 260000,
+    "net_profit": 165000,
+    "roi_percentage": 156,
+    "revenue_streams": {
+      "Lip products": 100000,
+      "Foundation": 90000,
+      "Eye makeup": 70000
+    },
+    "demographics": {
+      "Primary age": "18-30",
+      "Top community": "Indian Malaysian",
+      "Key concern": "Long-wear festive makeup"
+    },
+    "marketing_recommendations": [
+      "Feature inclusive foundation shade matching.",
+      "Pair bold lip colors with sweat-resistant base products.",
+      "Use cultural styling respectfully with Malaysian creators."
+    ],
+    "content_ideas": [
+      {
+        "title": "Festive lip pairings",
+        "description": "Match lip shades to sari and lehenga colors."
+      },
+      {
+        "title": "Heat-proof glam",
+        "description": "Long-wear makeup tutorial for open-house visits."
+      }
+    ],
+    "hashtag_strategy": {
+      "primary_hashtags": [
+        "#deepavaliglam",
+        "#festivemakeup",
+        "#malaysianmakeup"
+      ],
+      "brand_hashtags": [
+        "#LorealMalaysia",
+        "#FestiveGlow"
+      ]
+    },
+    "production_timeline": {
+      "Creator casting": "1 week",
+      "Shoot": "1 week",
+      "Festival launch": "2 weeks"
+    },
+    "success_metrics": {
+      "targets": {
+        "Video completion": "30%+",
+        "Shade finder clicks": "1,000+",
+        "Sales lift": "8%+"
+      }
+    }
+  },
+  {
+    "id": "hair-scalp-care",
+    "name": "Scalp Care Reset",
+    "hashtag": "scalpcare",
+    "platform": "YouTube",
+    "audience": "Millennials",
+    "category": "haircare",
+    "lifecycle": "Growing",
+    "trend_score": 69,
+    "roi_score": 121,
+    "growth": 9.8,
+    "engagement_rate": 4.8,
+    "days_to_peak": 21,
+    "fomo_score": 55,
+    "reach": 940000,
+    "action": "Safe to Join",
+    "predicted_roi": 121,
+    "roi_confidence": 0.76,
+    "success_probability": 0.69,
+    "break_even_time": 45,
+    "max_investment": 80000,
+    "risk_level": 0.29,
+    "early_trend_score": 64,
+    "anomaly_detected": false,
+    "trend_probability": 0.69,
+    "time_to_peak": "3 weeks",
+    "competitive_window": "Medium",
+    "action_urgency": "Build educational content",
+    "revenue_potential": 180000,
+    "net_profit": 100000,
+    "roi_percentage": 121,
+    "revenue_streams": {
+      "Treatment products": 120000,
+      "Salon tie-ins": 60000
+    },
+    "demographics": {
+      "Primary age": "25-40",
+      "Top community": "Haircare enthusiasts",
+      "Key concern": "Oily scalp and humidity"
+    },
+    "marketing_recommendations": [
+      "Explain scalp barrier basics in simple language.",
+      "Use weekly reset routines instead of complex regimens."
+    ],
+    "content_ideas": [
+      {
+        "title": "Scalp reset Sunday",
+        "description": "A weekly wash-day routine for humid climates."
+      }
+    ],
+    "hashtag_strategy": {
+      "primary_hashtags": [
+        "#scalpcare",
+        "#haircaremalaysia"
+      ],
+      "brand_hashtags": [
+        "#LorealHair"
+      ]
+    },
+    "production_timeline": {
+      "Script": "2 days",
+      "Shoot": "4 days",
+      "Publish": "1 day"
+    },
+    "success_metrics": {
+      "targets": {
+        "Watch time": "45%+",
+        "Comment questions": "100+"
+      }
+    }
+  },
+  {
+    "id": "quiet-luxury-beauty",
+    "name": "Quiet Luxury Beauty",
+    "hashtag": "quietluxurybeauty",
+    "platform": "TikTok",
+    "audience": "Millennials",
+    "category": "makeup",
+    "lifecycle": "Mature",
+    "trend_score": 61,
+    "roi_score": 98,
+    "growth": -2.2,
+    "engagement_rate": 3.9,
+    "days_to_peak": 0,
+    "fomo_score": 44,
+    "reach": 2100000,
+    "action": "Monitor Closely",
+    "predicted_roi": 98,
+    "roi_confidence": 0.7,
+    "success_probability": 0.58,
+    "break_even_time": 55,
+    "max_investment": 55000,
+    "risk_level": 0.43,
+    "early_trend_score": 38,
+    "anomaly_detected": false,
+    "trend_probability": 0.58,
+    "time_to_peak": "Past peak",
+    "competitive_window": "Low",
+    "action_urgency": "Use only as supporting creative theme",
+    "revenue_potential": 110000,
+    "net_profit": 55000,
+    "roi_percentage": 98,
+    "revenue_streams": {
+      "Complexion products": 70000,
+      "Lip products": 40000
+    },
+    "demographics": {
+      "Primary age": "28-40",
+      "Top community": "Premium beauty buyers",
+      "Key concern": "Polished everyday look"
+    },
+    "marketing_recommendations": [
+      "Keep spend conservative; fold into evergreen premium content."
+    ],
+    "content_ideas": [
+      {
+        "title": "Five-minute polished base",
+        "description": "Minimal base routine for office days."
+      }
+    ],
+    "hashtag_strategy": {
+      "primary_hashtags": [
+        "#quietluxurybeauty",
+        "#softglam"
+      ],
+      "brand_hashtags": [
+        "#LorealParisMY"
+      ]
+    },
+    "production_timeline": {
+      "Evergreen content": "1 week"
+    },
+    "success_metrics": {
+      "targets": {
+        "ROAS": "1.5x",
+        "Reach": "250K"
+      }
+    }
+  }
+]

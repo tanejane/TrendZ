@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Campaign Planner | TrendZ</title><link rel="stylesheet" href="/static/css/creator-candidates.css?v=6b-1"><link rel="stylesheet" href="/static/css/product-ui.css?v=product-1">
+<script src="https://unpkg.com/feather-icons" defer></script><script src="/static/js/product-ui.js?v=product-1" defer></script><script src="/static/js/creator-candidates.js?v=product-1" defer></script></head>
+<body class="product-ui">{% include 'product_nav.html' %}<main class="product-main" data-planner-root>
+<header class="product-page-heading"><div><p class="product-eyebrow">From signal to scenario</p><h1>Campaign Planner</h1><p>Build a campaign context around a trend, a compatible product and a reviewed creator.</p></div><div class="snapshot-note">Your assumptions. Transparent outcomes.<span>No predicted campaign performance.</span></div></header>
+{% include 'planner_steps.html' %}
+{% if context_unavailable %}<p role="alert">Frozen campaign context is unavailable or invalid. No demo context has been substituted.</p>{% endif %}
+{% if trend %}
+<div class="planner-selected-topic"><div><span>01 / Selected trend</span><strong>{{ trend.name }}</strong></div><a href="/roi-insights">Change trend</a></div>
+{% include 'creator_candidates.html' %}
+{% else %}
+<div class="planner-intro"><p class="product-eyebrow">Step 01</p><h2>Start with a beauty trend</h2><p>Select a trend to explore compatible products, then choose a creator with sufficient reviewed evidence.</p></div>
+<div class="planner-topics">{% for id,name in topics %}<a class="planner-topic" data-topic="{{ id }}" href="/roi-insights?topic_id={{ id }}"><div class="planner-topic-image" aria-hidden="true"></div><span>{{ name }}<i data-feather="arrow-up-right" aria-hidden="true"></i></span></a>{% endfor %}</div>
+<details class="dashboard-method"><summary>Before you plan</summary><p>Product and creator compatibility is evidence-gated. Unknown market evidence stays unknown. Manual-review-only candidates need acknowledgement; unavailable or ineligible contexts cannot proceed. Reach, costs and conversion assumptions are never filled from popularity.</p></details>
+{% endif %}
+{% include 'product_footer.html' %}
+</main></body></html>

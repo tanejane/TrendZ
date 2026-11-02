@@ -1,0 +1,1016 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendZ - Beauty Trend Intelligence Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="/static/css/color-palette.css" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif;
+            background: var(--gradient-primary);
+        }
+        .dashboard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .trend-card { transition: all 0.3s ease; }
+        .trend-card:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .chart-container { position: relative; height: 300px; }
+        .loading-spinner { animation: spin 1s linear infinite; }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    </style>
+    <link href="/static/css/premium-theme.css?v=simple-2" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    {% include 'data_notice.html' %}
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-xl font-bold text-gray-900">TrendZ</h1>
+                        <p class="text-xs text-gray-500">Beauty Trend Intelligence</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/watchlist" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 flex items-center">
+                        <i data-feather="eye" class="w-4 h-4 mr-2"></i> WatchList
+                    </a>
+                    <button onclick="testRealData()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 flex items-center">
+                        <i data-feather="wifi" class="w-4 h-4 mr-2"></i> Test Real Data
+                    </button>
+                    <button onclick="refreshAllData()" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 flex items-center">
+                        <i data-feather="refresh-cw" class="w-4 h-4 mr-2"></i> Refresh Data
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard -->
+    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <!-- Brand Hero -->
+        <section class="tz-hero p-8 sm:p-10 lg:p-14 mb-8">
+            <div class="tz-kicker mb-6">
+                <i data-feather="star" class="w-4 h-4"></i>
+                Malaysia Beauty Intelligence
+            </div>
+            <h1 class="font-bold mb-6">Turn beauty signals into confident brand moves.</h1>
+            <p class="text-lg sm:text-xl leading-8 mb-8">
+                Track emerging social trends, map them to L'Oreal-ready product actions, and prioritize campaigns with a clean decision dashboard.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 mb-10">
+                <a href="/roi-insights" class="bg-blue-600 text-white px-5 py-3 rounded-lg hover:bg-blue-700 flex items-center justify-center">
+                    <i data-feather="bar-chart-2" class="w-4 h-4 mr-2"></i> Explore ROI
+                </a>
+                <a href="/hashtag-products" class="btn-outline px-5 py-3 flex items-center justify-center">
+                    <i data-feather="hash" class="w-4 h-4 mr-2"></i> Map a Hashtag
+                </a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                <div class="tz-hero-stat pt-4">
+                    <strong>Trend Radar</strong>
+                    Source observations and component metrics
+                </div>
+                <div class="tz-hero-stat pt-4">
+                    <strong>Product Fit</strong>
+                    Malaysia-aware product and campaign matches
+                </div>
+                <div class="tz-hero-stat pt-4">
+                    <strong>Action Layer</strong>
+                    Watchlist, ROI views, content ideas, and creator leads
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <div class="flex items-center">
+                    <div class="p-3 rounded-full bg-blue-100">
+                        <i data-feather="trending-up" class="w-6 h-6 text-blue-600"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-sm font-medium text-gray-500">Emerging Trends</h3>
+                        <p class="text-2xl font-bold text-gray-900" id="emerging-trends-count">-</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <div class="flex items-center">
+                    <div class="p-3 rounded-full bg-green-100">
+                        <i data-feather="dollar-sign" class="w-6 h-6 text-green-600"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-sm font-medium text-gray-500">Campaign economics</h3>
+                        <p class="text-2xl font-bold text-gray-900" id="high-roi-count">-</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <div class="flex items-center">
+                    <div class="p-3 rounded-full bg-purple-100">
+                        <i data-feather="users" class="w-6 h-6 text-purple-600"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-sm font-medium text-gray-500">Total Reach</h3>
+                        <p class="text-2xl font-bold text-gray-900" id="total-reach">-</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <div class="flex items-center">
+                    <div class="p-3 rounded-full bg-orange-100">
+                        <i data-feather="activity" class="w-6 h-6 text-orange-600"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-sm font-medium text-gray-500">Avg Engagement</h3>
+                        <p class="text-2xl font-bold text-gray-900" id="avg-engagement">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">Filter Trends</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Platform</label>
+                    <select id="platform-filter" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent" onchange="applyFilters()">
+                        <option value="">All Platforms</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="tiktok">TikTok</option>
+                        <option value="youtube">YouTube</option>
+                        <option value="twitter">Twitter</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Audience</label>
+                    <select id="audience-filter" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent" onchange="applyFilters()">
+                        <option value="">All Audiences</option>
+                        <option value="genz">Gen Z</option>
+                        <option value="millennials">Millennials</option>
+                        <option value="genx">Gen X</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Category</label>
+                    <select id="category-filter" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent" onchange="applyFilters()">
+                        <option value="">All Categories</option>
+                        <option value="makeup">Makeup</option>
+                        <option value="skincare">Skincare</option>
+                        <option value="haircare">Hair</option>
+                        <option value="lifestyle">Lifestyle</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trends Table -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold text-gray-900">Current Trends</h3>
+                <div class="flex space-x-2">
+                    <a href="/roi-insights" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 flex items-center">
+                        <i data-feather="bar-chart-2" class="w-4 h-4 mr-2"></i> Hop on Now
+                    </a>
+                </div>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Trend</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Platform</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Lifecycle</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Score</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ROI</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Watchlist</th>
+                        </tr>
+                    </thead>
+                    <tbody id="trends-table-body" class="bg-white divide-y divide-gray-200">
+                        <!-- Trends will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Malaysia-Specific Features -->
+        <div class="bg-gradient-to-r from-green-50 to-yellow-50 rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold text-gray-900 flex items-center">
+                    Malaysia Beauty Intelligence
+                </h3>
+                <div class="flex items-center space-x-2">
+                    <a href="/hashtag-products" class="btn-secondary flex items-center">
+                        <i data-feather="hash" class="w-4 h-4 mr-2"></i> Hashtag Product Mapping
+                    </a>
+                    <button onclick="refreshMalaysiaData()" class="btn-primary flex items-center">
+                        <i data-feather="refresh-cw" class="w-4 h-4 mr-2"></i> Refresh Malaysia Data
+                    </button>
+                    <button type="button" class="text-sm text-gray-500" disabled aria-describedby="assistant-status">Assistant unavailable</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- L'Oreal Product Mapping -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h4 class="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                        <i data-feather="package" class="w-5 h-5 text-red-600 mr-2"></i>
+                        L'Oreal Product Mapping (curated catalogue)
+                    </h4>
+                    
+                    <!-- Quick Access to Hashtag Mapping -->
+                    <div class="mb-4 p-3 bg-pink-50 rounded-lg border border-pink-200">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h5 class="font-semibold text-pink-800">Interactive Hashtag Mapping</h5>
+                                <p class="text-sm text-pink-600">Click trending hashtags to see product recommendations</p>
+                            </div>
+                            <a href="/hashtag-products" class="btn-secondary text-sm font-medium">
+                                Try Now
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div id="malaysia-products-content">
+                        <div class="animate-pulse text-gray-500">Loading product mappings...</div>
+                    </div>
+                </div>
+
+                <!-- Malaysian Community Analysis -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h4 class="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                        <i data-feather="users" class="w-5 h-5 text-blue-600 mr-2"></i>
+                        Community Insights (demo only)
+                    </h4>
+                    <div id="malaysia-community-content">
+                        <div class="animate-pulse text-gray-500">Loading community analysis...</div>
+                    </div>
+                </div>
+
+                <!-- Trend Opportunities -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h4 class="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                        <i data-feather="lightbulb" class="w-5 h-5 text-yellow-600 mr-2"></i>
+                        Trend Opportunities (curated examples)
+                    </h4>
+                    <div id="malaysia-opportunities-content">
+                        <div class="animate-pulse text-gray-500">Loading opportunities...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Trend Forecasting -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold text-gray-900 flex items-center">
+                    <i data-feather="brain" class="w-6 h-6 text-purple-600 mr-3"></i>
+                    AI Trend Forecasting (demo only)
+                </h3>
+                <button onclick="refreshAIForecasting()" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">
+                    <i data-feather="refresh-cw" class="w-4 h-4 mr-2 inline"></i> Refresh Analysis
+                </button>
+            </div>
+            <div id="ai-forecasting-content">
+                <div class="animate-pulse text-gray-500">Loading AI trend forecasting...</div>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Trend Growth Chart</h3>
+                <div class="chart-container">
+                    <canvas id="trend-chart"></canvas>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Platform Distribution</h3>
+                <div class="chart-container">
+                    <canvas id="platform-chart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Early Detection Engine -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold text-gray-900 flex items-center">
+                    <i data-feather="zap" class="w-6 h-6 text-yellow-600 mr-3"></i>
+                    Early Detection & Business Intelligence
+                </h3>
+                <button onclick="refreshEarlyDetection()" class="bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700">
+                    <i data-feather="refresh-cw" class="w-4 h-4 mr-2 inline"></i> Refresh Detection
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Early Detection -->
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg p-6">
+                    <h4 class="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                        <i data-feather="trending-up" class="w-5 h-5 text-yellow-600 mr-2"></i>
+                        Early Detection
+                    </h4>
+                    <div id="early-detection-content">
+                        <div class="animate-pulse text-gray-500">Detecting emerging trends...</div>
+                    </div>
+                </div>
+
+                <!-- Business Value -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-6">
+                    <h4 class="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                        <i data-feather="dollar-sign" class="w-5 h-5 text-green-600 mr-2"></i>
+                        Business Value (assumption-based scenario)
+                    </h4>
+                    <div id="business-value-content">
+                        <div class="animate-pulse text-gray-500">Calculating business value...</div>
+                    </div>
+                </div>
+
+                <!-- Focus Groups -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6">
+                    <h4 class="text-lg font-bold text-gray-900 mb-4 flex items-center">
+                        <i data-feather="users" class="w-5 h-5 text-blue-600 mr-2"></i>
+                        Focus Groups (demo only)
+                    </h4>
+                    <div id="focus-groups-content">
+                        <div class="animate-pulse text-gray-500">Analyzing focus groups...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Creation Analysis -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold text-gray-900 flex items-center">
+                    <i data-feather="video" class="w-6 h-6 text-pink-600 mr-3"></i>
+                    Content Creation Analysis (curated examples)
+                </h3>
+                <div class="flex space-x-2">
+                    <a href="/influencer-collaboration" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 flex items-center">
+                        <i data-feather="users" class="w-4 h-4 mr-2"></i> Malaysian Influencers
+                    </a>
+                    <button onclick="refreshContentCreation()" class="bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700">
+                        <i data-feather="refresh-cw" class="w-4 h-4 mr-2 inline"></i> Refresh Analysis
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Quick Access to Influencer Collaboration -->
+            <div class="mb-4 p-4 bg-purple-50 rounded-lg border border-purple-200">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h5 class="font-semibold text-purple-800">Malaysian Influencer Network</h5>
+                        <p class="text-sm text-purple-600">Connect with top Malaysian beauty influencers for authentic collaborations</p>
+                    </div>
+                    <a href="/influencer-collaboration" class="btn-secondary text-sm font-medium">
+                        View Influencers
+                    </a>
+                </div>
+            </div>
+            
+            <div id="content-creation-content">
+                <div class="animate-pulse text-gray-500">Generating content strategies...</div>
+            </div>
+        </div>
+
+    </div>
+
+    <p id="assistant-status" class="text-sm text-gray-500 px-4 py-2">Provider not configured. Live assistant execution is intentionally deferred. No AI/model is connected.</p>
+
+    <script>
+        // Initialize Feather icons
+        feather.replace();
+
+        // Global variables for chart instances
+        let trendChart;
+        let platformChart;
+
+        // Load initial data on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSummaryData();
+            loadTrendsData();
+            loadChartData();
+            
+            // Load Malaysia-specific features after a short delay
+            setTimeout(() => {
+                loadMalaysiaProductMapping();
+                loadMalayCommunityAnalysis();
+                loadMalaysiaTrendOpportunities();
+            }, 1000);
+            
+            // Load other analysis features
+            setTimeout(() => {
+                loadAITrendForecasting();
+                loadEarlyDetection();
+                loadBusinessValue();
+                loadFocusGroups();
+                loadContentCreation();
+                loadWatchlist();
+            }, 2000);
+        });
+
+        // Malaysia-specific functions
+        async function loadMalaysiaProductMapping() {
+            try {
+                const response = await fetch('/api/malaysia/product-mapping');
+                const data = await response.json();
+                
+                let html = '';
+                if (data.status === 'success' && data.product_mappings) {
+                    html = `<div class="space-y-3">`;
+                    data.product_mappings.slice(0, 3).forEach(mapping => {
+                        const products = mapping.recommended_products || [];
+                        html += `
+                            <div class="border-l-4 border-red-500 pl-3">
+                                <h5 class="font-semibold text-sm">${String(mapping.trend_name).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]))}</h5>
+                                <p class="text-xs text-gray-600">${products.length} catalogue products mapped</p>
+                                <p class="text-xs text-green-600">${mapping.opportunity_score == null ? 'Curated product fit; no measured opportunity score' : 'Demo opportunity: ' + mapping.opportunity_score + '%'}</p>
+                            </div>
+                        `;
+                    });
+                    html += `</div>`;
+                } else {
+                    html = '<div class="text-red-500 text-sm">No product mappings available</div>';
+                }
+                
+                document.getElementById('malaysia-products-content').innerHTML = html;
+            } catch (error) {
+                document.getElementById('malaysia-products-content').innerHTML = 
+                    '<div class="text-red-500 text-sm">Error loading product mappings</div>';
+            }
+        }
+
+        async function loadMalayCommunityAnalysis() {
+            try {
+                const response = await fetch('/api/malaysia/community-analysis');
+                const data = await response.json();
+                
+                let html = '';
+                if (data.status === 'success' && data.community_analysis) {
+                    const analysis = data.community_analysis;
+                    html = `
+                        <div class="space-y-3">
+                            <div class="text-xs space-y-2">
+                                ${Object.keys(analysis).slice(0, 3).map(community => `
+                                    <div class="border-l-4 border-blue-500 pl-3">
+                                        <h5 class="font-semibold capitalize">${community}</h5>
+                                        <p class="text-gray-600">${analysis[community].trend_affinity || 'High'} trend affinity</p>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    html = '<div class="text-red-500 text-sm">No community analysis available</div>';
+                }
+                
+                document.getElementById('malaysia-community-content').innerHTML = html;
+            } catch (error) {
+                document.getElementById('malaysia-community-content').innerHTML = 
+                    '<div class="text-red-500 text-sm">Error loading community analysis</div>';
+            }
+        }
+
+        async function loadMalaysiaTrendOpportunities() {
+            try {
+                const response = await fetch('/api/malaysia/trend-opportunities');
+                const data = await response.json();
+                
+                let html = '';
+                if (data.status === 'success' && data.monthly_opportunities) {
+                    const opportunities = data.monthly_opportunities;
+                    html = `
+                        <div class="space-y-3">
+                            <div class="border-l-4 border-yellow-500 pl-3">
+                                <h5 class="font-semibold text-sm">${opportunities.month || 'Current Month'}</h5>
+                                <p class="text-xs text-gray-600">${opportunities.cultural_events?.length || 0} cultural events</p>
+                                <p class="text-xs text-yellow-600">${opportunities.campaign_opportunities?.length || 0} campaign opportunities</p>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    html = '<div class="text-red-500 text-sm">No opportunities available</div>';
+                }
+                
+                document.getElementById('malaysia-opportunities-content').innerHTML = html;
+            } catch (error) {
+                document.getElementById('malaysia-opportunities-content').innerHTML = 
+                    '<div class="text-red-500 text-sm">Error loading opportunities</div>';
+            }
+        }
+
+        function refreshMalaysiaData() {
+            document.getElementById('malaysia-products-content').innerHTML = 
+                '<div class="animate-pulse text-gray-500">Refreshing product mappings...</div>';
+            document.getElementById('malaysia-community-content').innerHTML = 
+                '<div class="animate-pulse text-gray-500">Refreshing community analysis...</div>';
+            document.getElementById('malaysia-opportunities-content').innerHTML = 
+                '<div class="animate-pulse text-gray-500">Refreshing opportunities...</div>';
+            
+            setTimeout(() => {
+                loadMalaysiaProductMapping();
+                loadMalayCommunityAnalysis();
+                loadMalaysiaTrendOpportunities();
+            }, 1000);
+        }
+
+        // Load summary data
+        async function loadSummaryData() {
+            try {
+                const response = await fetch('/api/summary');
+                const data = await response.json();
+                
+                document.getElementById('emerging-trends-count').textContent = data.emerging_trends ?? 'Unavailable';
+                document.getElementById('high-roi-count').textContent = data.high_roi_trends ?? 'Scenario only';
+                document.getElementById('total-reach').textContent = data.total_reach == null ? 'Unavailable' : formatNumber(data.total_reach);
+                document.getElementById('avg-engagement').textContent = data.avg_engagement == null ? 'Unavailable' : data.avg_engagement + '%';
+            } catch (error) {
+                console.error('Error loading summary data:', error);
+            }
+        }
+
+        // Load trends data
+        async function loadTrendsData() {
+            try {
+                const platform = document.getElementById('platform-filter').value;
+                const audience = document.getElementById('audience-filter').value;
+                const category = document.getElementById('category-filter').value;
+                
+                const params = new URLSearchParams();
+                if (platform) params.append('platform', platform);
+                if (audience) params.append('audience', audience);
+                if (category) params.append('category', category);
+                
+                const response = await fetch(`/api/trends?${params}`);
+                if (!response.ok) throw new Error('Trend request failed');
+                const payload = await response.json();
+                const trends = payload.trends;
+                
+                const tbody = document.getElementById('trends-table-body');
+                tbody.innerHTML = '';
+                
+                trends.forEach(trend => {
+                    const row = document.createElement('tr');
+                    row.className = 'hover:bg-gray-50 cursor-pointer';
+                    row.onclick = () => window.open(`/trend-detail/${trend.id}`, '_blank');
+                    
+                    row.innerHTML = `
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <div class="flex items-center">
+                                <div>
+                                    <div class="text-sm font-medium text-gray-900">${trend.name}</div>
+                                    <div class="text-sm text-gray-500">#${trend.hashtag}</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                ${trend.platform}
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getLifecycleColor(trend.lifecycle)}">
+                                ${trend.lifecycle ?? 'Unavailable'}
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            ${trend.trend_score == null ? 'Unavailable' : trend.trend_score + '/100'}
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            <a href="/roi-insights">Build scenario</a>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getActionColor(trend.action)}">
+                                ${trend.action}
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm">
+                            <button onclick="event.stopPropagation(); addToWatchlist('${trend.id}', '${trend.name}', this)" 
+                                    class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                <i data-feather="eye" class="w-3 h-3 mr-1"></i>
+                                Add to Watchlist
+                            </button>
+                        </td>
+                    `;
+                    
+                    tbody.appendChild(row);
+                    if (trend.data_mode !== 'demo') {
+                        const metricsRow = document.createElement('tr');
+                        const cell = document.createElement('td');
+                        cell.colSpan = 7;
+                        cell.className = 'px-6 py-3 text-sm text-gray-600';
+                        const series = trend.metrics.series;
+                        cell.textContent = series.length ? series.map(s =>
+                            s.source + ' / ' + s.metric + ' | ' +
+                            ['recent_growth', 'acceleration', 'persistence', 'volatility'].map(k =>
+                                k.replaceAll('_', ' ') + ': ' + (s[k].state === 'available' ?
+                                    s[k].value + ' ' + s[k].unit : 'Unavailable (' + s[k].reason + ')')
+                            ).join(' | ')
+                        ).join(' ; ') : trend.reason;
+                        metricsRow.appendChild(cell);
+                        tbody.appendChild(metricsRow);
+                    }
+                });
+                if (!trends.length) tbody.innerHTML = '<tr><td colspan="7" class="px-6 py-4">No matching topics.</td></tr>';
+                
+            } catch (error) {
+                console.error('Error loading trends data:', error);
+                document.getElementById('trends-table-body').innerHTML = '<tr><td colspan="7" class="px-6 py-4">Unable to load topics. Please retry.</td></tr>';
+            }
+        }
+
+        // Load chart data
+        async function loadChartData() {
+            try {
+                const response = await fetch('/api/chart-data');
+                const data = await response.json();
+                if (data.data_mode !== 'demo') {
+                    if (trendChart) trendChart.destroy();
+                    if (platformChart) platformChart.destroy();
+                    // Plot one source/unit at a time; interest and views are not comparable.
+                    const first = data.datasets[0];
+                    const rows = first?.observations || [];
+                    trendChart = new Chart(document.getElementById('trend-chart'), {
+                        type: 'line',
+                        data: {labels: rows.map(r => r.date), datasets: [{
+                            label: first?.label || 'No measured observations',
+                            data: rows.map(r => r.value), borderColor: '#374151'
+                        }]},
+                        options: {responsive: true, maintainAspectRatio: false}
+                    });
+                    platformChart = new Chart(document.getElementById('platform-chart'), {
+                        type: 'doughnut', data: {labels: ['Unavailable in Phase 1'], datasets: [{data: []}]},
+                        options: {responsive: true, maintainAspectRatio: false}
+                    });
+                    return;
+                }
+                
+                // Trend Growth Chart
+                const trendCtx = document.getElementById('trend-chart').getContext('2d');
+                if (trendChart) trendChart.destroy();
+                
+                trendChart = new Chart(trendCtx, {
+                    type: 'line',
+                    data: data,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { position: 'top' }
+                        },
+                        scales: {
+                            y: { beginAtZero: true }
+                        }
+                    }
+                });
+                
+                // Platform Distribution Chart
+                const platformCtx = document.getElementById('platform-chart').getContext('2d');
+                if (platformChart) platformChart.destroy();
+                
+                platformChart = new Chart(platformCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Instagram', 'TikTok', 'YouTube', 'Twitter'],
+                        datasets: [{
+                            data: [35, 30, 20, 15],
+                            backgroundColor: ['#E11D74', '#000000', '#FF0000', '#1DA1F2']
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { position: 'bottom' }
+                        }
+                    }
+                });
+                
+            } catch (error) {
+                console.error('Error loading chart data:', error);
+            }
+        }
+
+        // AI Trend Forecasting
+        async function loadAITrendForecasting() {
+            try {
+                const response = await fetch('/api/ai-trend-forecasting');
+                const data = await response.json();
+                
+                let html = '';
+                if (data.trend_summary) {
+                    html = `
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <div class="bg-purple-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-purple-900">Market Momentum</h4>
+                                <p class="text-purple-700">${data.market_dynamics?.momentum_direction || 'Stable'}</p>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-blue-900">Next Big Trend</h4>
+                                <p class="text-blue-700">${data.predictions?.next_big_trend || 'AI Beauty Tech'}</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-green-900">Investment Priority</h4>
+                                <p class="text-green-700">${data.recommendations?.investment_priorities?.[0] || 'Content creation'}</p>
+                            </div>
+                            <div class="bg-orange-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-orange-900">Platform Shift</h4>
+                                <p class="text-orange-700">${data.predictions?.platform_shifts || 'Short-form video'}</p>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    html = '<div class="text-red-500">No AI forecasting data available</div>';
+                }
+                
+                document.getElementById('ai-forecasting-content').innerHTML = html;
+            } catch (error) {
+                document.getElementById('ai-forecasting-content').innerHTML = 
+                    '<div class="text-red-500">Error loading AI forecasting</div>';
+            }
+        }
+
+        // Early Detection
+        async function loadEarlyDetection() {
+            try {
+                const response = await fetch('/api/early-detection');
+                const data = await response.json();
+                
+                let html = '';
+                if (data.length > 0) {
+                    html = '<div class="space-y-3">';
+                    data.slice(0, 3).forEach(detection => {
+                        html += `
+                            <div class="bg-white p-3 rounded border-l-4 border-yellow-500">
+                                <h5 class="font-semibold text-sm">${detection.trend_name || 'Emerging Trend'}</h5>
+                                <p class="text-xs text-gray-600">Early Score: ${detection.early_trend_score || 0}/100</p>
+                                <p class="text-xs text-yellow-600">${detection.action_urgency || 'Monitor closely'}</p>
+                            </div>
+                        `;
+                    });
+                    html += '</div>';
+                } else {
+                    html = '<div class="text-yellow-600">No early trends detected</div>';
+                }
+                
+                document.getElementById('early-detection-content').innerHTML = html;
+            } catch (error) {
+                document.getElementById('early-detection-content').innerHTML = 
+                    '<div class="text-red-500">Error loading early detection</div>';
+            }
+        }
+
+        // Business Value
+        async function loadBusinessValue() {
+            document.getElementById('business-value-content').innerHTML =
+                '<p>Commercial outcomes require explicit assumptions in a pinned context.</p><a href="/roi-insights">Open Campaign Scenarios</a>';
+        }
+
+        // Focus Groups
+        async function loadFocusGroups() {
+            try {
+                const response = await fetch('/api/focus-groups');
+                const data = await response.json();
+                
+                let html = '';
+                if (data.length > 0) {
+                    html = '<div class="space-y-3">';
+                    data.slice(0, 3).forEach(group => {
+                        const demographics = group.demographics || {};
+                        html += `
+                            <div class="bg-white p-3 rounded border-l-4 border-blue-500">
+                                <h5 class="font-semibold text-sm">${demographics.age_range || 'All Ages'}</h5>
+                                <p class="text-xs text-gray-600">${demographics.gender || 'All Genders'}</p>
+                                <p class="text-xs text-blue-600">Primary Platform: ${group.platform || 'Instagram'}</p>
+                            </div>
+                        `;
+                    });
+                    html += '</div>';
+                } else {
+                    html = '<div class="text-blue-600">No focus group data available</div>';
+                }
+                
+                document.getElementById('focus-groups-content').innerHTML = html;
+            } catch (error) {
+                document.getElementById('focus-groups-content').innerHTML = 
+                    '<div class="text-red-500">Error loading focus groups</div>';
+            }
+        }
+
+        // Content Creation
+        async function loadContentCreation() {
+            try {
+                const response = await fetch('/api/content-creation');
+                const data = await response.json();
+                
+                let html = '';
+                if (data.length > 0) {
+                    html = '<div class="grid grid-cols-1 md:grid-cols-2 gap-4">';
+                    data.slice(0, 4).forEach(content => {
+                        const ideas = content.content_ideas || [];
+                        html += `
+                            <div class="bg-pink-50 p-4 rounded-lg">
+                                <h5 class="font-semibold text-pink-900">${content.trend_name || 'Content Strategy'}</h5>
+                                <p class="text-sm text-pink-700">${ideas.length} content ideas</p>
+                                <p class="text-xs text-pink-600">Platform: ${content.platform || 'Instagram'}</p>
+                            </div>
+                        `;
+                    });
+                    html += '</div>';
+                } else {
+                    html = '<div class="text-pink-600">No content creation data available</div>';
+                }
+                
+                document.getElementById('content-creation-content').innerHTML = html;
+            } catch (error) {
+                document.getElementById('content-creation-content').innerHTML = 
+                    '<div class="text-red-500">Error loading content creation</div>';
+            }
+        }
+
+        // Watchlist
+        async function loadWatchlist() {
+            try {
+                const response = await fetch('/api/watchlist');
+                const data = await response.json();
+                
+                let html = '';
+                if (data.alerts && data.alerts.length > 0) {
+                    html = '<div class="space-y-3">';
+                    data.alerts.slice(0, 5).forEach(alert => {
+                        const urgencyColor = alert.urgency === 'HIGH' ? 'red' : 
+                                           alert.urgency === 'MEDIUM' ? 'yellow' : 'green';
+                        html += `
+                            <div class="flex items-center justify-between p-3 bg-${urgencyColor}-50 rounded-lg border-l-4 border-${urgencyColor}-500">
+                                <div>
+                                    <h5 class="font-semibold text-sm">${alert.trend_name || 'Trend Alert'}</h5>
+                                    <p class="text-xs text-gray-600">${alert.message || 'Trend update available'}</p>
+                                </div>
+                                <span class="px-2 py-1 text-xs bg-${urgencyColor}-200 text-${urgencyColor}-800 rounded">${alert.urgency || 'LOW'}</span>
+                            </div>
+                        `;
+                    });
+                    html += '</div>';
+                } else {
+                    html = '<div class="text-indigo-600">No alerts in watchlist</div>';
+                }
+                
+                document.getElementById('watchlist-content').innerHTML = html;
+            } catch (error) {
+                document.getElementById('watchlist-content').innerHTML = 
+                    '<div class="text-red-500">Error loading watchlist</div>';
+            }
+        }
+
+        // Refresh functions
+        function refreshAIForecasting() {
+            document.getElementById('ai-forecasting-content').innerHTML = 
+                '<div class="animate-pulse text-gray-500">Refreshing AI analysis...</div>';
+            setTimeout(loadAITrendForecasting, 1000);
+        }
+
+        function refreshEarlyDetection() {
+            document.getElementById('early-detection-content').innerHTML = 
+                '<div class="animate-pulse text-gray-500">Refreshing early detection...</div>';
+            setTimeout(loadEarlyDetection, 1000);
+        }
+
+        function refreshContentCreation() {
+            document.getElementById('content-creation-content').innerHTML = 
+                '<div class="animate-pulse text-gray-500">Refreshing content analysis...</div>';
+            setTimeout(loadContentCreation, 1000);
+        }
+
+        function refreshWatchlist() {
+            document.getElementById('watchlist-content').innerHTML = 
+                '<div class="animate-pulse text-gray-500">Refreshing watchlist...</div>';
+            setTimeout(loadWatchlist, 1000);
+        }
+
+        // Apply filters
+        function applyFilters() {
+            loadTrendsData();
+        }
+
+        // Test real data
+        async function testRealData() {
+            try {
+                const response = await fetch('/api/summary');
+                const data = await response.json();
+                alert('Data mode: ' + data.data_mode + '. ' + (data.reason || 'Collection runs separately from dashboard requests.'));
+            } catch (error) {
+                alert('Unable to connect to the backend.');
+            }
+        }
+
+        // Refresh all data
+        function refreshAllData() {
+            // Show loading states
+            document.getElementById('emerging-trends-count').textContent = '-';
+            document.getElementById('high-roi-count').textContent = '-';
+            document.getElementById('total-reach').textContent = '-';
+            document.getElementById('avg-engagement').textContent = '-';
+            
+            document.getElementById('trends-table-body').innerHTML = 
+                '<tr><td colspan="6" class="text-center py-4 text-gray-500">Refreshing trends data...</td></tr>';
+            
+            // Refresh all data
+            setTimeout(() => {
+                loadSummaryData();
+                loadTrendsData();
+                loadChartData();
+                loadAITrendForecasting();
+                loadEarlyDetection();
+                loadBusinessValue();
+                loadFocusGroups();
+                loadContentCreation();
+                loadWatchlist();
+                refreshMalaysiaData();
+            }, 1000);
+        }
+
+        // Utility functions
+        function formatNumber(num) {
+            if (num >= 1000000) {
+                return (num / 1000000).toFixed(1) + 'M';
+            } else if (num >= 1000) {
+                return (num / 1000).toFixed(1) + 'K';
+            }
+            return num?.toString() || '0';
+        }
+
+        function getLifecycleColor(lifecycle) {
+            switch (lifecycle) {
+                case 'Emerging': return 'bg-green-100 text-green-800';
+                case 'Growing': return 'bg-blue-100 text-blue-800';
+                case 'Mature': return 'bg-yellow-100 text-yellow-800';
+                case 'Decay': return 'bg-red-100 text-red-800';
+                default: return 'bg-gray-100 text-gray-800';
+            }
+        }
+
+        function getActionColor(action) {
+            if (action?.includes('Invest')) return 'bg-green-100 text-green-800';
+            if (action?.includes('Safe')) return 'bg-blue-100 text-blue-800';
+            if (action?.includes('Monitor')) return 'bg-yellow-100 text-yellow-800';
+            if (action?.includes('Avoid')) return 'bg-red-100 text-red-800';
+            return 'bg-gray-100 text-gray-800';
+        }
+
+        // Add to watchlist function
+        async function addToWatchlist(trendId, trendName, buttonElement) {
+            try {
+                const response = await fetch('/api/watchlist/add', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        trend_id: trendId,
+                        trend_name: trendName
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.status === 'success') {
+                    // Show success message
+                    alert(`"${trendName}" has been added to your watchlist.`);
+                    
+                    // Change button appearance
+                    if (buttonElement) {
+                        buttonElement.innerHTML = '<i data-feather="check" class="w-3 h-3 mr-1"></i>Added';
+                        buttonElement.className = buttonElement.className.replace('bg-indigo-600 hover:bg-indigo-700', 'bg-green-600 hover:bg-green-700');
+                        buttonElement.disabled = true;
+                        feather.replace();
+                    }
+                } else {
+                    alert(`Failed to add "${trendName}" to watchlist: ${data.message}`);
+                }
+            } catch (error) {
+                console.error('Error adding to watchlist:', error);
+                alert(`Error adding "${trendName}" to watchlist. Please try again.`);
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+

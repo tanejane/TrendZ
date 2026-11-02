@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="review-token" content="{{ review_token }}">
+    <title>TrendZ | Product Fit Review</title>
+    <link rel="stylesheet" href="/static/css/product-review.css">
+    <script src="/static/js/product-review.js" defer></script>
+</head>
+<body>
+    <header class="review-header">
+        <div><strong class="brand">TrendZ</strong><span>Product Fit Review</span></div>
+        <a href="/api/review/export" download>Export human labels</a>
+    </header>
+    <main>
+        <div class="progress-band">
+            <div><h1>Catalogue validation</h1><p id="progress">Loading review session...</p></div>
+            <div><progress id="completion" max="256" value="0" aria-label="Labelled pairs"></progress><p id="evidence-progress"></p></div>
+        </div>
+        <p id="provenance" class="muted"></p>
+        <div id="message" role="status" aria-live="polite"></div>
+        <details id="batch-panel"><summary>High-confidence pre-screen review by topic</summary>
+            <p id="assist-progress" class="muted"></p><div id="batch-groups"></div>
+        </details>
+        <div class="review-layout">
+            <aside aria-label="Review queue">
+                <label for="topic-filter">Topic</label><select id="topic-filter"></select>
+                <label for="status-filter">Queue</label>
+                <select id="status-filter"><option value="all">All pairs</option><option value="prescreen">Pre-screen acceptance</option><option value="research">Researched acceptance</option><option value="manual">Low-confidence manual review</option><option value="pending">Unlabelled</option><option value="evidence">Explanation check pending</option><option value="labelled">Labelled</option></select>
+                <p id="queue-count" class="muted"></p>
+                <div id="pair-list" class="pair-list"></div>
+            </aside>
+            <section id="pair-panel" aria-label="Pair evidence" aria-busy="true">
+                <div class="pair-heading"><div><p id="topic-name" class="muted"></p><h2 id="product-name">Loading...</h2></div><span id="prediction" class="state"></span></div>
+                <p id="pair-id" class="identifier"></p>
+                <section id="assist-panel" hidden aria-label="Review assistance">
+                    <h3>Review-assist suggestion</h3><p id="assist-label"></p>
+                    <p id="assist-evidence"></p><ul id="assist-sources"></ul>
+                    <p id="assist-uncertainty" class="muted"></p><p id="assist-status" role="status"></p>
+                    <button type="button" id="accept-assist">Accept suggestion and next</button>
+                    <button type="button" id="edit-assist">Edit human label</button>
+                </section>
+                <dl id="product-facts" class="facts"></dl>
+                <details><summary>Configured query intent</summary><pre id="intent"></pre></details>
+                <div class="evidence-grid">
+                    <section><h3>Supporting evidence</h3><div id="supporting"></div></section>
+                    <section><h3>Missing evidence</h3><ul id="missing"></ul><h3>Contradictions</h3><ul id="contradictions"></ul></section>
+                </div>
+                <section><h3>Source URLs</h3><ul id="sources"></ul></section>
+                <details><summary>Source quality and full ingredient evidence</summary><pre id="quality"></pre></details>
+                <form id="review-form">
+                    <fieldset><legend>Human fit label</legend>
+                        <div class="label-options">
+                            <label><input type="radio" name="human_label" value="direct_fit">Direct fit</label>
+                            <label><input type="radio" name="human_label" value="supporting_fit">Supporting fit</label>
+                            <label><input type="radio" name="human_label" value="no_fit">No fit</label>
+                            <label><input type="radio" name="human_label" value="insufficient_evidence">Insufficient evidence</label>
+                        </div>
+                    </fieldset>
+                    <div id="explanation-field"><label for="explanation">Predicted-match explanation evidence</label>
+                        <select id="explanation"><option value="">Pending</option><option value="supported">Supported by cited evidence</option><option value="unsupported">Contains unsupported evidence or claims</option></select>
+                    </div>
+                    <label for="notes">Review notes</label><textarea id="notes" maxlength="1000" rows="3"></textarea>
+                    <div class="reviewer-row"><label for="reviewer">Reviewer (optional)</label><input id="reviewer" maxlength="80" autocomplete="name"></div>
+                    <div class="actions"><button type="button" id="previous" title="Previous pair">Previous</button><button type="submit" id="save" class="primary">Save review</button><button type="button" id="save-next">Save and next pending</button><button type="button" id="next" title="Next pair">Next</button><button type="button" id="clear">Clear review</button></div>
+                    <p id="save-status" class="muted" role="status"></p>
+                </form>
+            </section>
+        </div>
+        <section class="report-section"><h2>Validation report</h2><p id="report-status">Pending human review.</p>
+            <button id="generate" disabled>Generate validation report</button>
+            <a id="download-report" hidden download="product-fit-validation.json">Download report JSON</a>
+            <pre id="report-preview" hidden></pre>
+        </section>
+    </main>
+</body>
+</html>

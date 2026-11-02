@@ -1,0 +1,13 @@
+<header class="product-topbar">
+    <a class="product-brand" href="/" aria-label="TrendZ dashboard">TrendZ<span>BEAUTY INTELLIGENCE</span></a>
+    <nav class="product-nav" aria-label="Main navigation">
+        <a href="/"{% if request.path == '/' and request.args.get('view') != 'explore' %} aria-current="page"{% endif %}>Dashboard</a>
+        <a href="/?view=explore"{% if request.args.get('view') == 'explore' or request.path.startswith('/trend-detail/') %} aria-current="page"{% endif %}>Explore Trends</a>
+        <a href="/watchlist"{% if request.path == '/watchlist' %} aria-current="page"{% endif %}>Watchlist</a>
+        <a href="/roi-insights"{% if request.path in ['/roi-insights','/campaign-scenario'] %} aria-current="page"{% endif %}>Campaign Planner</a>
+    </nav>
+    <span class="assistant-small" tabindex="0">
+        <button type="button" disabled aria-describedby="assistant-status"><i data-feather="cpu" aria-hidden="true"></i>AI Assistant <span>&middot; Not configured</span></button>
+        <span id="assistant-status" class="assistant-tooltip" role="tooltip">Provider not configured. Live assistant execution is intentionally deferred. No AI/model is connected. The nine-tool grounded infrastructure remains available for deterministic testing.</span>
+    </span>
+</header>

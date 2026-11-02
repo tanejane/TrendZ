@@ -1,0 +1,32 @@
+{% set explore = request.args.get('view') == 'explore' %}
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ 'Watchlist' if saved_only else 'Explore Trends' if explore else 'Beauty trend evidence' }} | TrendZ</title>
+<link rel="stylesheet" href="/static/css/product-ui.css?v=product-1">
+<script src="https://unpkg.com/feather-icons" defer></script>
+<script src="/static/js/product-ui.js?v=product-1" defer></script>
+<script src="/static/js/evidence-dashboard.js?v=product-1" defer></script></head>
+<body class="product-ui" data-saved-only="{{ 'true' if saved_only else 'false' }}" data-view="{{ 'watchlist' if saved_only else 'explore' if explore else 'dashboard' }}">
+{% include 'product_nav.html' %}
+<main class="product-main">
+<header class="product-page-heading">
+    <div><p class="product-eyebrow">{{ 'Your collection' if saved_only else 'Discover / Connect / Plan' if not explore else 'Explore the beauty landscape' }}</p>
+    <h1>{{ 'Your watchlist' if saved_only else 'Explore beauty trends' if explore else 'Beauty signals. Brand possibilities.' }}</h1>
+    <p>{{ 'The trends you save, and the evidence behind them.' if saved_only else 'Discover a trend. Find fitting products and creators. Test a campaign scenario.' }}</p></div>
+    <div class="snapshot-note"><span class="snapshot-dot"></span>MY market scope<span>Stored public signals &middot; not a live feed</span></div>
+</header>
+{% if not saved_only %}
+<nav class="discovery-journey" aria-label="Product journey"><a href="#trend-grid"><span>01</span>Discover a trend</a><i data-feather="arrow-right" aria-hidden="true"></i><a href="/?view=explore"><span>02</span>Find product fit</a><i data-feather="arrow-right" aria-hidden="true"></i><a href="/roi-insights"><span>03</span>Meet relevant creators</a><i data-feather="arrow-right" aria-hidden="true"></i><a href="/roi-insights"><span>04</span>Test a scenario</a></nav>
+{% endif %}
+<section class="discover-section" aria-labelledby="topics-heading">
+<div class="discover-heading"><div><p class="product-eyebrow" id="observed-label">Measured signals</p><h2 id="topics-heading">{{ 'Saved trends' if saved_only else 'Trends in focus' if not explore else 'Explore trends' }} <span id="observed-count" class="count-badge"></span></h2></div>
+<div class="discover-actions"><label class="trend-search"><i data-feather="search" aria-hidden="true"></i><input id="trend-search" type="search" placeholder="Find a trend" aria-label="Search trends"></label><button type="button" id="reload" class="icon-button" title="Refresh stored evidence" aria-label="Refresh evidence"><i data-feather="refresh-cw" aria-hidden="true"></i></button></div></div>
+<div class="category-tabs" role="group" aria-label="Filter by category"><button type="button" data-category="" aria-pressed="true">All trends</button><button type="button" data-category="skincare" aria-pressed="false">Skincare</button><button type="button" data-category="makeup" aria-pressed="false">Makeup</button><button type="button" data-category="haircare" aria-pressed="false">Haircare</button></div>
+<p id="dashboard-status" role="status" aria-live="polite">Loading stored trend evidence...</p>
+<div id="trend-grid" class="trend-grid" aria-busy="true"></div>
+<div id="watchlist-empty" class="collection-empty" hidden><span class="empty-bookmark"><i data-feather="bookmark" aria-hidden="true"></i></span><h2>Your watchlist is empty</h2><p>Save trends from Explore to keep the evidence you care about in one place.</p><a class="primary-link" href="/?view=explore">Explore trends <i data-feather="arrow-right" aria-hidden="true"></i></a></div>
+<div id="filtered-empty" class="filtered-empty" hidden><h3>No trends match these filters</h3><p>Try another category or search term.</p><button type="button" id="reset-filters">Clear filters</button></div>
+</section>
+{% if not saved_only %}<details class="awaiting-section"><summary><span>Tracked topics / Awaiting evidence</span><span id="awaiting-count"></span></summary><p>These topics are configured, but do not yet have collected observations. They are not measured trends.</p><div id="awaiting-topics" class="awaiting-topics"></div></details>{% endif %}
+<details class="dashboard-method"><summary>How this is measured</summary><p>Cards use the canonical query and the states returned by the existing intelligence API. No overall score or lifecycle is inferred. Provisional and unavailable states are distinct. Query aliases are not pooled. Open a trend for components, source dates, reasons and quality warnings. Editorial category imagery is illustrative.</p><span id="tracked-count"></span></details>
+{% include 'product_footer.html' %}
+</main></body></html>

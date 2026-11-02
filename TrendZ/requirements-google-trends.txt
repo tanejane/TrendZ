@@ -1,0 +1,2 @@
+# Optional unofficial adapter. Core app and CSV/YouTube do not require it.
+pytrends==4.9.2

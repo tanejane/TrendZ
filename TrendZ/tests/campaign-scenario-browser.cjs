@@ -1,0 +1,106 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs/promises');
+const path = require('node:path');
+const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const base = process.env.TEST_BASE_URL || 'http://127.0.0.1:5020';
+const output = process.env.SCREENSHOT_DIR || path.join(__dirname, '../reports/phase6b');
+
+(async () => {
+    await fs.mkdir(output, {recursive: true});
+    const browser = await chromium.launch({channel: 'chrome', headless: true});
+    const page = await browser.newPage({viewport: {width: 1440, height: 1000}});
+    const errors = []; page.on('pageerror', e => errors.push(String(e)));
+    let checks = 0, lastPayload;
+    page.on('response', async r => { if (r.url().endsWith('/api/campaign-scenarios/evaluate') && r.status() === 200) lastPayload = await r.json(); });
+    const form = page.locator('#scenario-form');
+    const input = name => form.locator(`[name="${name}"]`);
+    async function ready() { await form.waitFor({state: 'visible'}); }
+    async function calculate() {
+        const r = page.waitForResponse(r => r.url().endsWith('/api/campaign-scenarios/evaluate'));
+        await form.getByRole('button', {name: 'Calculate scenario', exact: true}).click();
+        return (await r).json();
+    }
+    async function fill() {
+        await input('objective').selectOption('conversion'); await input('format').selectOption('short_form_demonstration');
+        await input('channel').selectOption('youtube');
+        for (const [name, value] of Object.entries({start_date:'2026-11-01',end_date_exclusive:'2026-12-01',creator_fee:'600',media_spend:'200',production_cost:'150',other_cost:'50',budget_ceiling:'1200',aov:'50',gross_margin:'40',population:'1000',low_rate:'2',base_rate:'5',high_rate:'8'})) await input(name).fill(value);
+        await input('conversion_basis').selectOption('assumed_reach');
+    }
+    try {
+        await page.goto(base + '/roi-insights?topic_id=glass-skin');
+        await page.locator('.tz-creator-controls').waitFor({state:'visible'});
+        await page.selectOption('.tz-creator-controls [name=product_id]', 'mb-fresh-unspecified');
+        await page.getByRole('button', {name:'View candidates', exact:true}).click();
+        await page.locator('.tz-creator-card').first().waitFor();
+        assert.equal(await page.locator('.tz-creator-card[data-state=unavailable] .tz-campaign-action').count(), 0);
+        const url = await page.locator('.tz-creator-card[data-state=qualified_candidate] .tz-campaign-action').first().getAttribute('href');
+        const manualUrl = await page.locator('.tz-creator-card[data-state=manual_review_only] .tz-campaign-action').first().getAttribute('href');
+        await page.locator('.tz-creator-card[data-state=qualified_candidate] .tz-campaign-action').first().click();
+        await ready();
+        assert.equal(await input('population').inputValue(), '');
+        assert.equal(await input('base_rate').inputValue(), '');
+        assert.equal(await input('objective').inputValue(), '');
+        assert((await page.locator('#scenario-selection').innerText()).includes('indirect compatibility'));
+        await page.locator('.context-method > summary').click();
+        assert((await page.locator('#scenario-evidence').innerText()).includes('indirect compatibility'));
+        await page.locator('.context-method > summary').click();
+        checks++;
+        await fill();
+        let d = await calculate();
+        assert.equal(Number(d.calculated_outcomes.base.modeled_revenue.value), 2500);
+        assert.equal(Number(d.calculated_outcomes.base.modeled_roi.value), 0);
+        assert.deepEqual(d.sensitivity.map(r => Number(r.modeled_roi.value)), [-.6,0,.6]);
+        assert.equal(Number(d.break_even.conversion_rate.value), .05);
+        assert((await page.locator('#scenario-outcomes').innerText()).includes('1000 people'));
+        checks++;
+        await page.evaluate(() => window.scrollTo(0, document.querySelector('#scenario-outcomes').closest('section').getBoundingClientRect().top + scrollY - 12));
+        await page.screenshot({path:path.join(output,'campaign-desktop.png')});
+        await page.setViewportSize({width:390,height:844});
+        assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+        await page.evaluate(() => window.scrollTo(0, document.querySelector('#scenario-outcomes').closest('section').getBoundingClientRect().top + scrollY - 12));
+        await page.screenshot({path:path.join(output,'campaign-mobile.png')});
+        checks++;
+        await input('population').fill('');
+        assert.equal(await page.locator('#scenario-outcomes').innerText(), '');
+        d = await calculate();
+        assert.equal(d.calculated_outcomes.base.modeled_revenue.state, 'unavailable');
+        checks++;
+        await input('population').fill('1000');
+        for (const name of ['creator_fee','media_spend','production_cost','other_cost']) await input(name).fill('0');
+        d = await calculate(); assert.equal(d.calculated_outcomes.base.modeled_roi.state,'unavailable');
+        checks++;
+        await input('objective').selectOption('awareness');
+        d = await calculate(); assert.equal(d.calculated_outcomes.base.modeled_revenue.state, 'unavailable');
+        checks++;
+        await page.goto(base + manualUrl); await ready(); await fill();
+        assert(await page.locator('#manual-ack').isVisible());
+        d = await calculate(); assert.equal(d.code,'manual_acknowledgement_required');
+        assert.equal(await page.locator('#scenario-outcomes').innerText(), '');
+        await input('manual_accepted').check(); await input('manual_reason').fill('Explicit user planning consideration of limited evidence');
+        d = await calculate(); assert.equal(d.evidence.creator_candidate.candidate_state,'manual_review_only');
+        checks++;
+        await page.route('**/api/campaign-scenarios/evaluate', r => r.fulfill({status:409,json:{status:'error',code:'stale_context',message:'Fixture: refresh evidence'}}));
+        await calculate(); assert(await page.locator('#scenario-error').isVisible());
+        assert.equal(await page.locator('#scenario-outcomes').innerText(), '');
+        await page.unroute('**/api/campaign-scenarios/evaluate');
+        await page.getByRole('button',{name:'Refresh evidence context',exact:true}).click(); await ready();
+        assert.equal(await input('manual_accepted').isChecked(), false);
+        checks++;
+        await page.goto(base + url); await ready(); await fill();
+        await input('source_notes').fill('<img src=x onerror="window.injected=true">');
+        await calculate();
+        assert.equal(await page.locator('#scenario-outcomes img').count(),0);
+        assert.equal(await page.evaluate(() => window.injected),undefined);
+        const download = page.waitForEvent('download');
+        await page.locator('#result-details summary').click(); await page.getByRole('button',{name:'Download JSON'}).click();
+        assert.equal((await download).suggestedFilename(),'trendz-campaign-scenario.json');
+        checks++;
+        const snapshot = {...lastPayload.provenance.context_ref};
+        const request = {schema_version:'campaign-scenario-v1',calculation_version:'campaign-economics-v1',context_ref:snapshot,assumptions:lastPayload.assumptions};
+        const one = await (await fetch(base+'/api/campaign-scenarios/evaluate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(request)})).json();
+        const two = await (await fetch(base+'/api/campaign-scenarios/evaluate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(request)})).json();
+        assert.deepEqual(one.calculated_outcomes,two.calculated_outcomes); checks++;
+        assert.deepEqual(errors,[]);
+        console.log(JSON.stringify({checks,page_errors:errors,screenshots:output},null,2));
+    } finally { await browser.close(); }
+})().catch(e => {console.error(e);process.exitCode=1;});

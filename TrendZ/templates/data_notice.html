@@ -1,0 +1,14 @@
+<div role="status" class="max-w-7xl mx-auto px-4 py-2 text-sm text-gray-600" style="border-bottom:1px solid #ddd">
+{% if request.path == '/roi-insights' %}
+ROI scenario: assumption-based examples and calculations, not observed or predicted performance.
+{% elif data_mode == 'demo' %}
+Demo mode: example trends and analytics. No live market measurements.
+{% else %}
+Real mode: collected observations only. Missing data and metrics remain unavailable.
+{% endif %}
+{% if request.path == '/influencer-collaboration' %}
+Influencer examples remain demonstration content.
+{% elif request.path == '/hashtag-products' %}
+Catalogue browser: original curated snapshot. The frozen, evidence-hardened Product Fit context is used on trend detail and campaign pages. Review results are assisted, not independent gold.
+{% endif %}
+</div>
